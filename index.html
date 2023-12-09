@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Boris Picard Développeur Web et Web Mobile">
+    <link rel="stylesheet" href="/public/assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>Boris Picard - développeur Web et Web Mobile</title>
+</head>
+<body>
+    <header>
+        <div class="headerContainer">
+            <button type="button" class="navToggler jsNavToggler">
+                <span data-text="close">menu</span>
+            </button>
+            <nav class="navJs jsNav">
+                <ul>
+                    <li><a href="#home" style="--i: 0">Home</a></li>
+                    <li><a href="#about" style="--i: 1">A Propos</a></li>
+                    <li><a href="#" style="--i: 2">Expériences</a></li>
+                    <li><a href="#portfolio" style="--i: 3">Portfolio</a></li>
+                    <li><a href="#contact" style="--i: 4">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <!-- <div class="verticalCircle1">
+        </div>
+        <div class="verticalCircle2">
+        </div>
+        <div class="verticalCircle3">
+        </div>
+        <div class="verticalCircle4">
+        </div> -->
+        <!-- HERO PAGE -->
+        <section class="heroPage" id="home">
+            <h1 class="heroTitle">boris picard</h1>
+            <p class="heroText">développeur web et web mobile</p>
+            <button class="heroButton">télécharger mon cv</button>
+        </section>
+        <section class="about" id="about">
+            <div class="leftAbout">
+                <h2 class="titleAbout">a propos</h2>
+                <p class="textAbout">Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                Et deleniti esse dolorum blanditiis non amet laboriosam aspernatur expedita repudiandae porro, consequuntur voluptate facilis aliquid optio unde consectetur! Laboriosam, odio expedita.
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio repellendus tenetur, quo aut perspiciatis neque 
+                sapiente rerum sequi, distinctio dolores dolor, aspernatur facere ex iusto facilis asperiores quibusdam. Neque, rerum!
+            </p>
+            </div>
+            <div class="rightAbout">
+                <div class="divImgAbout">
+                    <img src="/public/assets/img/michael-dam-mEZ3PoFGs_k-unsplash.jpg" alt="profil picture" class="imgAbout">
+                </div>
+            </div>
+        </section>
+        <!-- EXPERIENCES SECTION -->
+        <section class="experiences">
+            <div id="logo-slider">
+                <div class="slider">
+                    <div class="slide"><i class="fa-brands fa-html5 fa-5x"></i></div>
+                    <div class="slide"><i class="fa-brands fa-css3-alt fa-5x"></i></div>
+                    <div class="slide"><i class="fa-brands fa-js fa-5x"></i></div>
+                </div>
+            </div>
+        </section>
+        <!-- PORTFOLIO -->
+        <section class="portfolio" id="portfolio">
+            <div class="rowTitlePortfolio">
+                <h2 class="titlePortfolio">portfolio</h2>
+            </div>
+            <div class="rowButtonPortfolio">
+                <div id="filter-buttons">
+                    <button class="active" data-filter="all">Tous mes projets</button>
+                    <button class="" data-filter="front">Front-end</button>
+                    <button class="" data-filter="back">Back-end</button>
+                    <button class="" data-filter="wordpress">Wordpress</button>
+                </div>
+            </div>
+            <div id="filterable-cards">
+                <div class="card" data-name="front">
+                    <img src="/public/assets/img/yams.png" alt="Jeu du yams" />
+                    <div class="hover-overlay">
+                        <div class="pillsRow">
+                            <button class="pillsHtml">html</button>
+                            <button class="pillsCss">css</button>
+                            <button class="pillsJs">javascript</button>
+                        </div>
+                        <h3 class="titleHoverCard">Jeu du yams</h3>
+                        <p class="textHoverCard">Projet realisé en javascript</p>
+                        <div class="buttonHoverDiv">
+                            <button class="buttonHoverCard">voir le projet</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" data-name="front">
+                    <img src="/public/assets/img/pendu.png" alt="Jeu du pendu" />
+                    <div class="hover-overlay">
+                        <div class="pillsRow">
+                            <button class="pillsHtml">html</button>
+                            <button class="pillsCss">css</button>
+                            <button class="pillsJs">javascript</button>
+                        </div>
+                        <h3 class="titleHoverCard">Jeu du pendu</h3>
+                        <p class="textHoverCard">Projet realisé en javascript</p>
+                        <div class="buttonHoverDiv">
+                            <button class="buttonHoverCard">voir le projet</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" data-name="back">
+                    <img src="/public/assets/img/tpformulairephp.png" alt="Formulaire projet" />
+                    <div class="hover-overlay">
+                        <div class="pillsRow">
+                            <button class="pillsHtml">html</button>
+                            <button class="pillsCss">css</button>
+                            <button class="pillsPhp">php</button>
+                        </div>
+                        <h3 class="titleHoverCard">Formulaire</h3>
+                        <p class="textHoverCard">Projet realisé en php sécurisation d'un formulaire</p>
+                        <div class="buttonHoverDiv">
+                            <button class="buttonHoverCard">voir le projet</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" data-name="wordpress">
+                    <img src="/public/assets/img/wordpress.png" alt="Wordpress projet" />
+                    <div class="hover-overlay">
+                        <div class="pillsRow">
+                            <button class="pillsHtml">html</button>
+                            <button class="pillsCss">css</button>
+                            <button class="pillsWordpress">wordpress</button>
+                        </div>
+                        <h3 class="titleHoverCard">Site wordpress</h3>
+                        <p class="textHoverCard">Projet realisé avec wordpress sur le thème de nöel</p>
+                        <div class="buttonHoverDiv">
+                            <button class="buttonHoverCard">voir le projet</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- CONTACT SECTION -->
+        <section class="contact" id="contact">
+            <div class="rowTitleContact">
+                <h2 class="titleContact">me contacter</h2>
+            </div>
+            <div class="rowForm">
+                <div class="leftForm">
+                    <form action="">
+                        <label for="firstname">Prénom</label><span id="nameMsgError"></span>
+                        <input 
+                        type="text" 
+                        name="firstname" 
+                        id="firstname" 
+                        placeholder="Votre prénom*"
+                        required
+                        autocomplete="given-name"
+                        minlength="2" 
+                        maxlength="70"
+                        >
+                        <label for="lastname">Nom</label><span id="lastnameMsgError"></span>
+                        <input 
+                        type="text" 
+                        name="lastname" 
+                        id="lastname" 
+                        placeholder="Votre nom"
+                        required
+                        autocomplete="family-name"
+                        minlength="2" 
+                        maxlength="70"
+                        >
+                        <label for="email">Email</label><span id="emailMsgError"></span>
+                        <input 
+                        type="email" 
+                        name="email" 
+                        id="email" 
+                        autocomplete="email"
+                        placeholder="Votre email*"
+                        required  
+                        >
+                        <textarea 
+                        name="comments" 
+                        id="comments" 
+                        name="comments"
+                        pattern="^[a-zA-Z\n\r]*$"
+                        placeholder="Votre message*"
+                        maxlength="5000"
+                        required
+                        ></textarea>
+                        <div class="buttonDivForm">
+                            <button type="submit" class="buttonForm">Envoyer</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="rightForm">
+                    <div>
+                        <h3 class="titleMailContact">Mon mail</h3>
+                        <hr class="separator">
+                    </div>
+                    <div class="mailDiv">
+                        <i class="fa-solid fa-envelope fa-2x"></i>
+                        <a href="mailto:boris.picard@gmail.com" target="_blank" class="mailContact">boris.picard@gmail.com</a>
+                    </div>
+                    <div>
+                        <h3 class="titleSocials">Mes réseaux</h3>
+                        <hr class="separatorSocials">
+                    </div>
+                    <div class="socialsDiv">
+                        <a href="https://www.linkedin.com/in/boris-picard-2906029b/" target="_blank"><i class="fa-brands fa-linkedin fa-2x"></i></a>
+                        <a href="https://github.com/Boris-Picard" target="_blank"><i class="fa-brands fa-github fa-2x"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+    <script src="/public/assets/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,1036 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    /* text size */
+    --regular : 18px;
+    /* color */
+    --primary-color : #f18701;
+    --grey-color : #353B41;
+    --white-color : #EFF2F5;
+    margin: 0;
+}
+
+/* TYPO */ 
+@font-face {
+    font-family: BLUDHAVEN;
+    src: url("../typo/BLUDHAVEN.ttf");
+}
+
+/* NAVBAR */
+.headerContainer {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-right: 10%;
+}
+
+.navToggler {
+    font-weight: bold;
+    margin-top: 50px;
+    position: fixed;
+    color: hsl(0, 8%, 95%);
+    font-size: 24px;
+    cursor: pointer;
+    text-transform: uppercase;
+    z-index: 11;
+    border: none;
+    background-color: transparent;
+    overflow: hidden;
+    transition: .5s ease-in-out;
+}
+
+.navToggler:hover {
+    letter-spacing: 5px;
+}
+
+.navToggler span {
+    position: relative;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.navToggler.active span {
+    transform: translateY(-100%);
+}
+
+.navToggler span::after{
+    content: attr(data-text);
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    transform: translateX(-50%);
+    color: hsl(0, 0%, 90%);
+}
+
+.navJs {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #111111;
+    z-index: 10;
+    display: flex;
+    transition: all 0.5s ease;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.navJs.open {
+    visibility: visible;
+    opacity: 1;
+}
+
+.navJs ul {
+    margin: auto;
+    list-style: none;
+    padding: 80px 15px;
+}
+
+.navJs li {
+    text-align: center;
+    line-height: 1;
+    overflow-y: hidden;
+}
+
+.navJs li + li  {
+    margin-top: 30px;
+}
+
+.navJs a {
+    color: #f18701;
+    display: inline-block;
+    font-size: 150px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-decoration: none;
+    padding: 0 15px;
+    position: relative;
+    opacity: 0;
+    transform: translateY(100%);
+    font-family: BLUDHAVEN;
+    transition: color 0.6s cubic-bezier(.97, .02, .01, .98),
+                transform 1s ease,
+                opacity 0.3s ease;
+}
+
+.navJs.open a {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0s, calc(0.05s * var(--i));
+}
+
+.navJs a:hover {
+    color: hsl(0, 0%, 90%);
+}
+
+.navJs a::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 2px;
+    background-color: hsl(0, 0%, 90%);
+    width: 0;
+    transition: width 0.6s cubic-bezier(.97, .02, .01, .98);
+}
+
+.navJs a:hover::before {
+    width: 100%;
+}
+
+/* SECTION HERO PAGE */
+.heroPage {
+    height: 100vh;
+    background-color: #111111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.heroTitle {
+    font-family: BLUDHAVEN;
+    text-transform: uppercase;
+    font-size: 200px;
+    color: var(--white-color);
+    margin: 0;
+    font-weight: normal;
+}
+
+.heroText {
+    color: var(--white-color);
+    font-size: var(--regular);
+    text-transform: uppercase;
+}
+
+.heroButton {
+    text-transform: uppercase;
+    background-color: var(--white-color);
+    padding: 15px;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+    border: none;
+}
+
+.heroButton:hover {
+    letter-spacing: 3px;
+}
+
+/* SIDE BAR */
+.verticalCircle1 {
+    position: sticky;
+    height: 20px;
+    width: 20px;
+    top: 43%;
+    left: 95%;
+    border: 3px solid rgba( 255, 255, 255, 0.50 ); 
+    border-radius: 50%; 
+    background-color: transparent; 
+    color: var(--white-color);
+    cursor: pointer;
+}
+
+.verticalCircle1:hover {
+    opacity: 1; 
+    background-color: var(--white-color);
+    border: 5px solid rgba( 255, 255, 255, 0.50 );
+    transform: scale(1.1);
+}
+
+.verticalCircle2 {
+    position: sticky;
+    height: 20px;
+    width: 20px;
+    top: 47%;
+    left: 95%;
+    border: 3px solid rgba( 255, 255, 255, 0.50 ); 
+    border-radius: 50%; 
+    background-color: transparent; 
+    color: var(--white-color);
+    cursor: pointer;
+}
+
+.verticalCircle2:hover {
+    opacity: 1; 
+    background-color: var(--white-color);
+    border: 5px solid rgba( 255, 255, 255, 0.50 );
+    transform: scale(1.1);
+}
+
+.verticalCircle3 {
+    position: sticky;
+    height: 20px;
+    width: 20px;
+    top: 51%;
+    left: 95%;
+    border: 3px solid rgba( 255, 255, 255, 0.50 ); 
+    border-radius: 50%; 
+    background-color: transparent; 
+    color: var(--white-color);
+    cursor: pointer;
+}
+
+.verticalCircle3:hover {
+    opacity: 1; 
+    background-color: var(--white-color);
+    border: 5px solid rgba( 255, 255, 255, 0.50 );
+    transform: scale(1.1);
+}
+
+.verticalCircle4 {
+    position: sticky;
+    height: 20px;
+    width: 20px;
+    top: 55%;
+    left: 95%;
+    border: 3px solid rgba( 255, 255, 255, 0.50 ); 
+    border-radius: 50%; 
+    background-color: transparent; 
+    color: var(--white-color);
+    cursor: pointer;
+}
+
+.verticalCircle4:hover {
+    opacity: 1; 
+    background-color: var(--white-color);
+    border: 5px solid rgba( 255, 255, 255, 0.50 );
+    transform: scale(1.1);
+}
+
+.visibleCircle {
+    opacity: 1; 
+    transition: opacity 0.8s ease-in-out; 
+    background-color: var(--white-color);
+    border: 5px solid rgba( 255, 255, 255, 0.50 );
+    transform: scale(1.1);
+}
+
+.hiddenCircle {
+    opacity: 0.5;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* SECTION ABOUT */
+.about {
+    padding: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: var(--white-color);
+}
+
+.leftAbout {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+}
+
+.rightAbout {
+    display: flex;
+    width: 50%;
+    height: 100%;
+}
+
+.titleAbout {
+    font-family: BLUDHAVEN;
+    font-size: 120px;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.textAbout {
+    padding-top: 20px;
+    font-size: var(--white-color);
+}
+
+.imgAbout {
+    object-fit: cover;
+    position: relative;
+    max-width: 1000px;
+    max-height: 1000px;
+}
+
+.divImgAbout {
+    position: relative;
+}
+
+.divImgAbout::before {
+    position: absolute;
+    left: 9%;
+    bottom: -5%;
+    top: -5%;
+    width: 100%;
+    height: 95%;
+    border: 4px solid var(--primary-color);
+    content: '';
+}
+
+/* EXPERIENCES SECTION */
+#logo-slider {
+    overflow: hidden;
+    position: relative;
+}
+
+.slider {
+    display: flex;
+    white-space: nowrap;
+    animation: slideAnimation 20s linear infinite; 
+}
+
+.slide {
+    flex-shrink: 0;
+    display: inline-block;
+    padding: 0 20px; 
+    cursor: pointer;
+}
+
+@keyframes slideAnimation {
+    0% {
+        transform: translateX(100%); 
+    }
+    100% {
+        transform: translateX(-100%); 
+    }
+}
+
+/* PORTFOLIO SECTION */
+.portfolio {
+    height: 100vh;
+    background-color: #111111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 40px;
+}
+
+/* BUTTON FILTER */
+.rowButtonPortfolio {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+#filter-buttons button {
+    text-transform: uppercase;
+    color: var(--white-color);
+    background-color: transparent;
+    font-weight: bold;
+    font-size: 24px;
+    padding: 15px;
+    transition: .5s ease-in-out;
+    border: none;
+    cursor: pointer;
+}
+
+#filter-buttons button:hover {
+    letter-spacing: 5px;
+    color: #f18701;
+}
+
+#filter-buttons button.active {
+    color: #f18701;
+}
+
+/* FILTER CARD */
+#filterable-cards {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#filterable-cards .card {
+    position: relative;
+    opacity: 1;
+    margin: 1rem;
+    overflow: hidden;
+    transition: transform 0.8s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+#filterable-cards .card.show {
+    opacity: 1; 
+    transform: scale(1) rotate(0deg); 
+    filter: blur(0px); 
+}
+
+#filterable-cards .card.hide {
+    opacity: 0;
+    pointer-events: none;
+    flex-basis: 0%;
+    transform: scale(1.05) rotate(5deg); 
+}
+
+.card {
+    width: 500px;
+    height: 300px;
+    display: flex;
+}
+
+.card img {
+    object-fit: fill;
+    width: 100%;
+    height: 100%;
+}
+
+/* HOVER CARDS */
+.hover-overlay {
+    position: absolute;
+    bottom: -100%; 
+    left: 0;
+    right: 0;
+    height: 100%; 
+    background-color: rgba(0, 0, 0, 0.7); 
+    transition: bottom 0.5s ease;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.card:hover .hover-overlay {
+    bottom: 0; 
+}
+
+.titleHoverCard {
+    justify-content: center;
+    font-size: 30px;
+    color: var(--white-color);
+    text-transform: uppercase;
+    margin: 20px 0 0 0;
+    flex-basis: 100%;
+    text-align: center;
+    display: flex;
+}
+
+.textHoverCard {
+    justify-content: center;
+    font-size: 20px;
+    color: var(--white-color);
+    text-align: center;
+    display: flex;
+    flex-basis: 100%;
+}
+
+.buttonHoverDiv {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.buttonHoverCard {
+    text-transform: uppercase;
+    color: var(--white-color);
+    background-color: #111111;
+    padding: 15px;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+    border: none;
+}
+
+.buttonHoverCard:hover {
+    letter-spacing: 3px;
+}
+
+/* PILLS */
+.pillsRow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    gap: 10px;
+}
+
+.pillsHtml {
+    padding: 10px;
+    border-radius: 30px;
+    text-transform: uppercase;
+    background-color: #FF5733;
+    border:none;
+    color:white;
+    font-weight: bold;
+}
+
+.pillsCss {
+    padding: 10px;
+    border-radius: 30px;
+    text-transform: uppercase;
+    background-color: #264de4;
+    border:none;
+    color:white;
+    font-weight: bold;
+}
+
+.pillsJs {
+    background-color: #d8c545;
+    padding: 10px;
+    border-radius: 30px;
+    text-transform: uppercase;
+    border:none;
+    color:white;
+    font-weight: bold;
+}
+
+.pillsPhp {
+    background-color: #AEB2D5;
+    padding: 10px;
+    border-radius: 30px;
+    text-transform: uppercase;
+    border:none;
+    color:white;
+    font-weight: bold;
+}
+
+.pillsWordpress {
+    background-color: #00749C;
+    padding: 10px;
+    border-radius: 30px;
+    text-transform: uppercase;
+    border:none;
+    color:white;
+    font-weight: bold;
+}
+
+/* PORTFOLIO TEXT */
+.textPortfolio {
+    font-size: var(--regular);
+}
+
+.rowTitlePortfolio {
+    height: 20vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.titlePortfolio {
+    font-size: 120px;
+    font-family: BLUDHAVEN;
+    color: var(--white-color);
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+/* CONTACT SECTION */
+.contact {
+    height: 100vh;
+    background-color: var(--white-color);
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+}
+
+.rowTitleContact {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 20%;
+}
+
+.titleContact {
+    font-weight: normal;
+    font-family: BLUDHAVEN;
+    font-size: 120px;
+    margin: 0;
+    padding: 40px;
+    text-transform: uppercase;
+}
+
+.rowForm {
+    display: flex;
+    height: 80%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.leftForm {
+    display: flex;
+    flex-basis: 50%;
+}
+
+.rightForm {
+    display: flex;
+    flex-basis: 30%;
+    height: 80%;
+    background-color: #111111;
+    border-radius: 10px;
+    padding: 20px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.separator {
+    display: flex;
+    margin-top: 35px;
+    color: var(--white-color);
+}
+
+.separatorSocials {
+    display: flex;
+    color: var(--white-color);
+    margin-top: 35px;
+}
+
+.mailDiv {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 70%;
+}
+
+.socialsDiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.fa-envelope{
+    color: var(--white-color);
+}
+
+.fa-linkedin {
+    color: var(--white-color);
+    transition: all 0.5s ease-in-out;
+}
+
+.fa-linkedin:hover {
+    color: #0A66C2;
+}
+
+.fa-github {
+    color: var(--white-color);
+    transition: all 0.5s ease-in-out;
+}
+
+.fa-github:hover {
+    color: var(--primary-color);
+}
+
+.mailContact {
+    text-decoration: none;
+    color: var(--white-color);
+    font-size: 24px;
+    padding: 20px 0 20px 20px;
+    letter-spacing: 1px;
+    transition: all 0.5s ease-in-out;
+}
+
+.mailContact:hover {
+    color: var(--primary-color);
+}
+
+.titleMailContact {
+    color: var(--white-color);
+    font-size: 26px;
+    text-transform: uppercase;
+    height: 5%;
+    letter-spacing: 2px;
+}
+
+.titleSocials {
+    color: var(--white-color);
+    font-size: 26px;
+    text-transform: uppercase;
+    height: 5%;
+    letter-spacing: 2px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    padding: 20px;
+}
+
+textarea {
+    height: 200px;
+    border: none;
+    background-color: transparent;
+}
+
+input {
+    height: 10%;
+    background-color: transparent;
+    border: none;
+    border-bottom: solid 1px #111111;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    transition: border 0.2s ease-in-out;
+    border-bottom: 2px solid #f18701;
+}
+
+.buttonDivForm {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.buttonForm {
+    text-transform: uppercase;
+    background-color: #111111;
+    padding: 25px;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+    border: none;
+    color: var(--white-color);
+}
+
+.buttonForm:hover {
+    letter-spacing: 5px;
+    background-color: var(--primary-color);
+}
+
+#nameMsgError {
+    display: none;
+    font-weight: bold;
+}
+
+#lastnameMsgError {
+    display: none;
+    font-weight: bold;
+}
+
+#emailMsgError {
+    display: none;
+    font-weight: bold;
+}
+
+.error {
+    color: red;
+}
+
+.success {
+    color: green;
+}
+
+/* REPONSIVE */
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+    .heroTitle {
+        font-size: 50px;
+    }
+    .verticalCircle1, .verticalCircle2, .verticalCircle3, .verticalCircle4 {
+        display: none;
+    }
+    .headerContainer {
+        margin: 0;
+    }
+    .navJs a {
+        font-size: 46px;
+    }
+    .navToggler:hover {
+        letter-spacing: 3px;
+    }
+    .about {
+        flex-direction: column;
+        padding: 0;
+        height: 100%;
+    }
+    .leftAbout {
+        align-items: start;
+        display: flex;
+        width: 100vw;
+        padding-left: 10px;
+    }
+    .titleAbout {
+        padding: 20px;
+        font-size: 56px;
+    }
+    .textAbout {
+        padding: 20px;
+    }
+    .imgAbout {
+        padding-top: 20px;
+        max-width: 300px;
+        max-height: 300px;
+        clip-path: circle();
+    }
+    .divImgAbout::before {
+        display: none;
+    }
+    .titlePortfolio {
+        padding-top: 20px;
+        font-size: 56px;
+    }
+    #filter-buttons button {
+        font-size: 24px;
+    }
+    #filter-buttons button:hover {
+        letter-spacing: 0;
+    }
+    #filterable-cards {
+        display: flex;
+        align-items: start;
+        justify-content: start;
+    }
+    .portfolio {
+        height: 100%;
+    }
+    .card {
+        width: 95vw;
+        height: auto; 
+    }
+    .titleHoverCard {
+        font-size: 20px;
+    }
+    .textHoverCard {
+        font-size: 14px;
+    }
+    .buttonHoverCard {
+        padding: 8px;
+        font-size: 12px;
+    }
+    .pillsHtml {
+        padding: 3px;
+        font-size: 12px;
+    }
+    .pillsCss {
+        padding: 3px;
+        font-size: 12px;
+    }
+    .pillsJs {
+        padding: 3px;
+        font-size: 12px;
+    }
+    .pillsPhp {
+        padding: 3px;
+        font-size: 12px;
+    }
+    .pillsWordpress {
+        padding: 3px;
+        font-size: 12px;
+    }
+    .contact {
+        height: 100%;
+        flex-direction: column;
+        padding: 20px 0 0 0;
+    }
+    .leftForm {
+        width: 100%;
+    }
+    .rowTitleContact {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .titleContact {
+        font-size: 56px;
+    }
+    .rowForm {
+        flex-direction: column;
+    }
+    .mailDiv {
+        justify-content: center;
+    }
+    .socialsDiv {
+        padding: 20px 0 0 0;
+    }
+    .buttonForm {
+        width: 50%;
+    }
+    .buttonForm:hover {
+        letter-spacing: 0;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    .heroTitle {
+        font-size: 100px;
+    }
+    .verticalCircle1, .verticalCircle2, .verticalCircle3, .verticalCircle4 {
+        display: none;
+    }
+    .headerContainer {
+        margin: 0;
+    }
+    .navJs a {
+        font-size: 100px;
+    }
+    .navToggler:hover {
+        letter-spacing: 3px;
+    }
+    .about {
+        flex-direction: column;
+        padding: 0;
+        height: 100vh;
+    }
+    .leftAbout {
+        align-items: start;
+        display: flex;
+        width: 100vw;
+        padding-left: 10px;
+    }
+    .titleAbout {
+        padding: 20px;
+        font-size: 100px;
+    }
+    .textAbout {
+        padding: 20px;
+    }
+    .imgAbout {
+        padding: 20px;
+        max-width: 600px;
+        max-height: 600px;
+    }
+    .portfolio {
+        height: 100%;
+    }
+    .titlePortfolio {
+        padding: 20px;
+        font-size: 100px;
+    }
+    #filter-buttons button {
+        font-size: 20px;
+    }
+    #filter-buttons button:hover {
+        letter-spacing: 0;
+    }
+    .card {
+        width: 100%; 
+        height: 100%; 
+    }
+    .titleHoverCard {
+        font-size: 40px;
+    }
+    .textHoverCard {
+        font-size: 24px;
+    }
+    .buttonHoverCard {
+        font-size: 20px;
+    }
+    .pillsHtml {
+        font-size: 20px;
+    }
+    .pillsCss {
+        font-size: 20px;
+    }
+    .pillsJs {
+        font-size: 20px;
+    }
+    .pillsPhp {
+        font-size: 20px;
+    }
+    .pillsWordpress {
+        font-size: 20px;
+    }
+    .contact {
+        height: 100%;
+        flex-direction: column;
+        padding: 20px 0 0 0;
+    }
+    .leftForm {
+        width: 100%;
+    }
+    .rightForm {
+        width: 100%;
+    }
+    form {
+        font-size: 24px;
+    }
+    .rowTitleContact {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .titleContact {
+        font-size: 56px;
+    }
+    .rowForm {
+        flex-direction: column;
+    }
+    .mailDiv {
+        justify-content: center;
+    }
+    .socialsDiv {
+        padding: 20px 0 0 0;
+    }
+    .buttonForm {
+        width: 45%;
+        font-size: 20px;
+    }
+    .buttonForm:hover {
+        letter-spacing: 0;
+    }
+}
