@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Boris Picard Développeur Web et Web Mobile">
     <link rel="stylesheet" href="/public/assets/css/style.css">
+    <link rel="stylesheet" href="/public/assets/css/mobile.css">
+    <link rel="stylesheet" href="/public/assets/css/tablet.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,32 +21,36 @@
             </button>
             <nav class="navJs jsNav">
                 <ul>
-                    <li><a href="#home" style="--i: 0">Home</a></li>
-                    <li><a href="#about" style="--i: 1">A Propos</a></li>
-                    <li><a href="#" style="--i: 2">Expériences</a></li>
-                    <li><a href="#portfolio" style="--i: 3">Portfolio</a></li>
-                    <li><a href="#contact" style="--i: 4">Contact</a></li>
+                    <li class="li-nav"><a href="#home" style="--i: 0">Home</a></li>
+                    <li class="li-nav"><a href="#about" style="--i: 1">A Propos</a></li>
+                    <li class="li-nav"><a href="#" style="--i: 2">Expériences</a></li>
+                    <li class="li-nav"><a href="#portfolio" style="--i: 3">Portfolio</a></li>
+                    <li class="li-nav"><a href="#contact" style="--i: 4">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
     <main>
-        <!-- <div class="verticalCircle1">
-        </div>
-        <div class="verticalCircle2">
-        </div>
-        <div class="verticalCircle3">
-        </div>
-        <div class="verticalCircle4">
-        </div> -->
+        <ul id="social-media-icons">
+            <li><a href="https://www.linkedin.com/in/boris-picard-2906029b/" class="icon" target="_blank"><i class="fa-brands fa-linkedin fa-2x"></i></a></li>
+            <li><a href="https://github.com/Boris-Picard" class="icon" target="_blank"><i class="fa-brands fa-github fa-2x"></i></a></li>
+        </ul>
+        <ul class="verticalUl">
+            <li class="verticalCircle1"></li>
+            <li class="verticalCircle2"></li>
+            <li class="verticalCircle3"></li>
+            <li class="verticalCircle4"></li>
+        </ul>
         <!-- HERO PAGE -->
-        <section class="heroPage" id="home">
-            <h1 class="heroTitle" >boris picard</h1>
+        <section class="heroPage home" id="home">
+            <h1 class="heroTitle">boris picard</h1>
             <p class="heroText typewriter">développeur web et web <span id="typewriter-text"></span><span id="cursor">|</span></p>
             <button class="heroButton">télécharger mon cv</button>
+            <div id="particles-js">
+            </div>
         </section>
         <section class="about" id="about">
-            <div class="leftAbout">
+            <div class="leftAbout from-left">
                 <h2 class="titleAbout">a propos</h2>
                 <p class="textAbout">Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
                 Et deleniti esse dolorum blanditiis non amet laboriosam aspernatur expedita repudiandae porro, consequuntur voluptate facilis aliquid optio unde consectetur! Laboriosam, odio expedita.
@@ -52,7 +58,7 @@
                 sapiente rerum sequi, distinctio dolores dolor, aspernatur facere ex iusto facilis asperiores quibusdam. Neque, rerum!                
                 </p>
             </div>
-            <div class="rightAbout">
+            <div class="rightAbout from-right">
                 <div class="divImgAbout">
                     <img src="/public/assets/img/michael-dam-mEZ3PoFGs_k-unsplash.jpg" alt="profil picture" class="imgAbout">
                 </div>
@@ -71,17 +77,17 @@
         <!-- PORTFOLIO -->
         <section class="portfolio" id="portfolio">
             <div class="rowTitlePortfolio">
-                <h2 class="titlePortfolio">portfolio</h2>
+                <h2 class="titlePortfolio from-left">portfolio</h2>
             </div>
             <div class="rowButtonPortfolio">
-                <div id="filter-buttons">
-                    <button class="active" data-filter="all">Tous mes projets</button>
+                <div id="filter-buttons" class="from-right">
+                    <button class="active " data-filter="all">Tous mes projets</button>
                     <button class="" data-filter="front">Front-end</button>
                     <button class="" data-filter="back">Back-end</button>
                     <button class="" data-filter="wordpress">Wordpress</button>
                 </div>
             </div>
-            <div id="filterable-cards">
+            <div id="filterable-cards" class="from-left">
                 <div class="card" data-name="front">
                     <img src="/public/assets/img/yams.png" alt="Jeu du yams" />
                     <div class="hover-overlay">
@@ -161,11 +167,11 @@
         </section>
         <!-- CONTACT SECTION -->
         <section class="contact" id="contact">
-            <div class="rowTitleContact">
+            <div class="rowTitleContact from-left">
                 <h2 class="titleContact">me contacter</h2>
             </div>
             <div class="rowForm">
-                <div class="leftForm">
+                <div class="leftForm from-left">
                     <form action="">
                         <span id="nameMsgError"></span>
                         <input 
@@ -204,7 +210,7 @@
                         id="textArea" 
                         name="textArea"
                         pattern="^[a-zA-Z\n\r]*$"
-                        placeholder="Message"
+                        placeholder="Message*"
                         maxlength="5000"
                         required
                         ></textarea>
@@ -213,7 +219,7 @@
                         </div>
                     </form>
                 </div>
-                <div class="rightForm">
+                <div class="rightForm from-right">
                     <div>
                         <h3 class="titleMailContact">Mon mail</h3>
                         <hr class="separator">
@@ -237,8 +243,7 @@
     <footer>
 
     </footer>
-    <script src="/public/assets/js/three.r134.min.js"></script>
-    <script src="/public/assets/js/vanta.net.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/ScrollTrigger.min.js"></script>
     <script src="/public/assets/js/script.js"></script>

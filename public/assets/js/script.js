@@ -1,48 +1,68 @@
-// VANTA.NET({
-//     el: "#home",
-//     mouseControls: true,
-//     touchControls: true,
-//     gyroControls: false,
-//     minHeight: 200.00,
-//     minWidth: 200.00,
-//     scale: 1.00,
-//     scaleMobile: 1.00,
-//     color: 0xe6e6e6,
-//     backgroundColor: 0x111111,
-//     points: 5.00,
-//     maxDistance: 14.00,
-//     spacing: 20.00
-// })
-
-// Capturer l'élément canvas de Vanta.js par son ID
-const canvasElement = document.getElementById('home');
-
-// Initialisation de l'animation Vanta.js (assurez-vous d'avoir correctement configuré Vanta.js au préalable)
-const vantaEffect = VANTA.NET({
-  el: canvasElement,
-  mouseControls: true, // Activez les contrôles de la souris
+/* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
+particlesJS.load('particles-js', '/public/assets/js/particlesjs-config.json', function() {
+    console.log('callback - particles.js config loaded');
 });
 
-// Écouter l'événement de mouvement de la souris
-canvasElement.addEventListener('mousemove', (event) => {
-  // Mettre à jour les propriétés de l'animation Vanta.js en fonction de la souris
-  // Par exemple, vous pouvez ajuster la rotation en fonction de la position de la souris
-  const mouseX = (event.clientX / window.innerWidth) * 2 - 1;
-  const mouseY = (event.clientY / window.innerHeight) * 2 - 1;
+// TRACK CHANGEMENT DE SECTION
+const toggleCircle = (sceneSelector, circleClass) => {
+    gsap.timeline({
+        scrollTrigger: {
+            trigger: sceneSelector,
+            start: "top center", 
+            end: () => "+=" + document.querySelector(sceneSelector).offsetHeight,
+            onEnter: () => {
+                document.querySelector(circleClass).classList.add("visibleCircle");
+                document.querySelector(circleClass).classList.remove("hiddenCircle");
+            },
+            onLeave: () => {
+                document.querySelector(circleClass).classList.remove("visibleCircle");
+                document.querySelector(circleClass).classList.add("hiddenCircle");
+            },
+            onEnterBack: () => {
+                document.querySelector(circleClass).classList.add("visibleCircle");
+                document.querySelector(circleClass).classList.remove("hiddenCircle");
+            },
+            onLeaveBack: () => {
+                document.querySelector(circleClass).classList.remove("visibleCircle");
+                document.querySelector(circleClass).classList.add("hiddenCircle");
+            },
+        }
+    });
+}
 
-  // Mettez à jour l'angle de la caméra en fonction de la position de la souris
-  vantaEffect.setOptions({
-    tiltX: mouseX, // Angle de rotation horizontale
-    tiltY: mouseY, // Angle de rotation verticale
-  });
+toggleCircle("#home", ".verticalCircle1");
+toggleCircle("#about", ".verticalCircle2");
+toggleCircle("#portfolio", ".verticalCircle3");
+toggleCircle("#contact", ".verticalCircle4");
+
+// FONCTION POUR SCROLL A LA BONNE SECTION AU CLICK SUR UN CERCLE
+const scrollToSection = (selector) => {
+    const targetSection = document.querySelector(selector);
+    if (targetSection) {
+        targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+}
+
+document.querySelector('.verticalCircle1').addEventListener('click', function() {
+    scrollToSection('#home');
 });
 
+document.querySelector('.verticalCircle2').addEventListener('click', function() {
+    scrollToSection('#about');
+});
 
+document.querySelector('.verticalCircle3').addEventListener('click', function() {
+    scrollToSection('#portfolio');
+});
 
+document.querySelector('.verticalCircle4').addEventListener('click', function() {
+    scrollToSection('#contact');
+});
 
+// FONCTION NAV MENU TOGGLE
 const navToggler = document.querySelector(".jsNavToggler");
 const nav = document.querySelector(".jsNav");
-const linkNav = document.querySelectorAll("li")
+const navLinks = document.querySelectorAll('.li-nav');
 
 // FONCTION POUR L'OVERLAY
 const togglerNav = () => {
@@ -50,7 +70,7 @@ const togglerNav = () => {
     nav.classList.toggle("open");
 }
 
-linkNav.forEach(link => {
+navLinks.forEach(link => {
     link.addEventListener("click", () => {
         togglerNav();
     });
@@ -156,55 +176,11 @@ lastName.addEventListener("input", validLastname);
 firstName.addEventListener("input", validFirstName);
 email.addEventListener("input", validEmail);
 
-// SCROLL TRIGGER 
+// SCROLL TRIGGER ET GSAP
 gsap.registerPlugin(ScrollTrigger) 
 
-// gsap.to(".textAbout", {
-//     scrollTrigger: {
-//         trigger: ".textAbout",
-//         start: "top 80%", 
-//         end: "bottom 20%", 
-//         toggleActions: "restart pause restart pause" 
-//         },
-//     opacity: 1, 
-//     duration: 1, 
-//     ease: "power2.out" 
-// });
 
-
-// gsap.from(".imgAbout", {
-//     scrollTrigger: {
-//         trigger: ".imgAbout",
-//         start: "top 75%", 
-//         toggleActions: "restart pause restart pause" 
-//     },
-//     x: -200, 
-//     opacity: 0, 
-//     duration: 1.5, 
-//     ease: "expo.out" 
-// });
-
-// gsap.from(".titleAbout", {
-//     scrollTrigger: {
-//         trigger: ".titleAbout",
-//         start: "top 90%", 
-//         toggleActions: "restart pause restart pause"
-//     },
-//     scale: 0.5, 
-//     opacity: 0, 
-//     duration: 1, 
-//     ease: "back.out(1.7)" 
-// });
-
-// gsap.from(".heroTitle", {
-//     opacity: 0,      
-//     scale: 0.8,      
-//     y: -50,          
-//     duration: 1.5,  
-//     ease: "power2.out", 
-//     delay: 0.5      
-// });
-
+// FONCTION POUR REMPLACER DYNAMIQUEMENT UN MOT
 const texts = ["mobile", "programmation"];
 let textIndex = 0;
 let charIndex = 0;
@@ -238,3 +214,48 @@ gsap.to(cursor, { opacity: 0, repeat: -1, yoyo: true, duration: 0.5 });
 
 window.onload = typeWriter;
 
+
+gsap.utils.toArray('.from-left').forEach((element, i) => {
+    gsap.from(element, {
+        scrollTrigger: {
+            trigger: element,
+            start: "top bottom",
+            toggleActions: "restart pause restart pause"
+        },
+        x: -window.innerWidth, 
+        duration: 1.5,
+        delay: i * 0.3, 
+        ease: "power2.out", 
+    });
+});
+
+// Éléments venant de la droite
+gsap.utils.toArray('.from-right').forEach((element, i) => {
+    gsap.from(element, {
+        scrollTrigger: {
+            trigger: element,
+            start: "top bottom",
+            toggleActions: "restart pause restart pause"
+        },
+        x: window.innerWidth, 
+        duration: 1.5,
+        delay: i * 0.3,
+        ease: "power2.out",
+    });
+});
+
+
+
+const tl = gsap.timeline({ defaults: { duration: 1, ease: "power2.out" } });
+
+tl.from(".heroTitle", { opacity: 0, y: 50, delay:0.5 })
+    .from(".heroText", { opacity: 0, y: 50 }, "-=0.20")
+    .from(".heroButton", { opacity: 0, y: 50 }, "-=0.20")
+    .from(".navToggler", { opacity: 0, y: 50 }, "-=0.20")
+    .from("#social-media-icons", { opacity: 0, y: 50 }, "-=0.20")
+    .from(".fa-linkedin", { opacity: 0, y: 50 }, "-=0.20")
+    .from(".fa-github", { opacity: 0, y: 50 }, "-=0.20")
+    .from(".verticalCircle1", { opacity: 0, y: 50 }, "-=0.20")
+    .from(".verticalCircle2", { opacity: 0, y: 50 }, "-=0.20")
+    .from(".verticalCircle3", { opacity: 0, y: 50 }, "-=0.20")
+    .from(".verticalCircle4", { opacity: 0, y: 50 }, "-=0.20")

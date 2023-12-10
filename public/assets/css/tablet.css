@@ -1,0 +1,136 @@
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    .heroTitle {
+        font-size: 100px;
+    }
+    .verticalCircle1 {
+        bottom: 15%;
+    }
+    .verticalCircle2 {
+        bottom: 11%;
+    }
+    .verticalCircle3 {
+        bottom: 7%;
+    }
+    .verticalCircle4 {
+        bottom: 3%;
+    }
+    .headerContainer {
+        margin: 0;
+    }
+    .navJs a {
+        font-size: 100px;
+    }
+    .navToggler:hover {
+        letter-spacing: 3px;
+    }
+    .about {
+        flex-direction: column;
+        padding: 0;
+        height: 100vh;
+    }
+    .leftAbout {
+        align-items: start;
+        display: flex;
+        width: 100vw;
+        padding-left: 10px;
+    }
+    .titleAbout {
+        padding: 20px;
+        font-size: 100px;
+    }
+    .textAbout {
+        padding: 20px;
+    }
+    .imgAbout {
+        padding: 20px;
+        max-width: 600px;
+        max-height: 600px;
+    }
+    .portfolio {
+        height: 100%;
+    }
+    .titlePortfolio {
+        padding: 20px;
+        font-size: 100px;
+    }
+    #filter-buttons button {
+        font-size: 20px;
+    }
+    #filter-buttons button:hover {
+        letter-spacing: 0;
+    }
+    .card {
+        width: 100%; 
+        height: 100%; 
+    }
+    .titleHoverCard {
+        font-size: 40px;
+    }
+    .textHoverCard {
+        font-size: 24px;
+    }
+    .buttonHoverCard {
+        font-size: 20px;
+    }
+    .pillsHtml {
+        font-size: 20px;
+    }
+    .pillsCss {
+        font-size: 20px;
+    }
+    .pillsJs {
+        font-size: 20px;
+    }
+    .pillsPhp {
+        font-size: 20px;
+    }
+    .pillsWordpress {
+        font-size: 20px;
+    }
+    .contact {
+        height: 100%;
+        flex-direction: column;
+        padding: 20px 0 0 0;
+    }
+    .leftForm {
+        width: 100%;
+    }
+    .rightForm {
+        width: 100%;
+    }
+    form {
+        font-size: 24px;
+    }
+    .rowTitleContact {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .titleContact {
+        font-size: 56px;
+    }
+    .rowForm {
+        flex-direction: column;
+    }
+    .mailDiv {
+        justify-content: center;
+    }
+    .socialsDiv {
+        padding: 20px 0 0 0;
+    }
+    .buttonForm {
+        width: 45%;
+        font-size: 20px;
+    }
+    .buttonForm:hover {
+        letter-spacing: 0;
+    }
+    html {
+        scroll-snap-type: none;
+    }
+    textarea::placeholder {
+        color: var(--white-color);
+        font-size: 24px;
+        font-family: 'Montserrat', sans-serif;
+    }
+}

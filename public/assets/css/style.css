@@ -9,6 +9,26 @@ body {
     margin: 0;
 }
 
+html {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+}
+
+section {
+    scroll-snap-align: start;
+}
+
+#particles-js{
+    position: absolute;
+    width: 100% !important;
+    height: 100% !important;
+    background-color: #181A1B;
+}
+
+canvas {
+    width: 100% !important;
+    height: 100% !important;
+}
 
 /* TYPO */ 
 @font-face {
@@ -16,12 +36,41 @@ body {
     src: url("../typo/BLUDHAVEN.ttf");
 }
 
+/* SOCIAL LEFT */
+#social-media-icons {
+    list-style: none;
+    position: fixed;
+    bottom: 50px; 
+    height: 170px;
+    z-index: 9999;
+}
+
+#social-media-icons::after {
+    content: '';
+    display: block;
+    width: 3px; 
+    height: 100%; 
+    background-color: var(--primary-color); 
+    position: absolute;
+    left: 55%;
+    transform: translateX(-50%); 
+}
+
+#social-media-icons li {
+    margin: 25px 0;
+}
+
+.icon {
+    position: relative;
+    left: -15px;
+}
+
 /* NAVBAR */
 .headerContainer {
     display: flex;
     align-items: center;
     justify-content: end;
-    margin-right: 10%;
+    margin-right: 1%;
 }
 
 .navToggler {
@@ -36,11 +85,10 @@ body {
     border: none;
     background-color: transparent;
     overflow: hidden;
-    transition: .5s ease-in-out;
 }
 
 .navToggler:hover {
-    letter-spacing: 5px;
+    color: var(--primary-color);
 }
 
 .navToggler span {
@@ -158,12 +206,14 @@ body {
     color: var(--white-color);
     margin: 0;
     font-weight: normal;
+    z-index: 1;
 }
 
 .heroText {
     color: var(--white-color);
     font-size: 24px;
     text-transform: uppercase;
+    z-index: 1;
 }
 
 .heroButton {
@@ -172,8 +222,8 @@ body {
     padding: 15px;
     border-radius: 30px;
     font-weight: bold;
-    transition: .5s ease-in-out;
     cursor: pointer;
+    z-index: 9;
     border: none;
 }
 
@@ -186,16 +236,22 @@ body {
     font-weight: bold;
 }
 
-/* SIDE BAR */
+/* RIGHT BAR */
+.verticalUl {
+    position: fixed;
+    list-style-type: none;
+    z-index: 99999;
+}
+
 .verticalCircle1 {
-    position: sticky;
-    height: 20px;
-    width: 20px;
-    top: 43%;
-    left: 95%;
+    position: fixed;
+    height: 15px;
+    width: 15px;
+    right: 2%;
+    bottom: 60%;
+    clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%); 
     border: 3px solid rgba( 255, 255, 255, 0.50 ); 
-    border-radius: 50%; 
-    background-color: transparent; 
+    background-color: var(--white-color); 
     color: var(--white-color);
     cursor: pointer;
 }
@@ -203,19 +259,18 @@ body {
 .verticalCircle1:hover {
     opacity: 1; 
     background-color: var(--white-color);
-    border: 5px solid rgba( 255, 255, 255, 0.50 );
-    transform: scale(1.1);
+    border: 3px solid rgba( 255, 255, 255, 0.50 );
 }
 
 .verticalCircle2 {
-    position: sticky;
-    height: 20px;
-    width: 20px;
-    top: 47%;
-    left: 95%;
+    position: fixed;
+    height: 15px;
+    width: 15px;
+    right: 2%;
+    bottom: 56%;
+    clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%); 
     border: 3px solid rgba( 255, 255, 255, 0.50 ); 
-    border-radius: 50%; 
-    background-color: transparent; 
+    background-color: var(--white-color); 
     color: var(--white-color);
     cursor: pointer;
 }
@@ -223,39 +278,38 @@ body {
 .verticalCircle2:hover {
     opacity: 1; 
     background-color: var(--white-color);
-    border: 5px solid rgba( 255, 255, 255, 0.50 );
-    transform: scale(1.1);
+    border: 3px solid rgba( 255, 255, 255, 0.50 );
 }
 
 .verticalCircle3 {
-    position: sticky;
-    height: 20px;
-    width: 20px;
-    top: 51%;
-    left: 95%;
+    position: fixed;
+    height: 15px;
+    width: 15px;
+    right: 2%;
+    bottom: 52%;
+    clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%); 
     border: 3px solid rgba( 255, 255, 255, 0.50 ); 
-    border-radius: 50%; 
-    background-color: transparent; 
+    background-color: var(--white-color); 
     color: var(--white-color);
     cursor: pointer;
 }
 
+
 .verticalCircle3:hover {
     opacity: 1; 
     background-color: var(--white-color);
-    border: 5px solid rgba( 255, 255, 255, 0.50 );
-    transform: scale(1.1);
+    border: 3px solid rgba( 255, 255, 255, 0.50 );
 }
 
 .verticalCircle4 {
-    position: sticky;
-    height: 20px;
-    width: 20px;
-    top: 55%;
-    left: 95%;
+    position: fixed;
+    height: 15px;
+    width: 15px;
+    right: 2%;
+    bottom: 48%;
+    clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%); 
     border: 3px solid rgba( 255, 255, 255, 0.50 ); 
-    border-radius: 50%; 
-    background-color: transparent; 
+    background-color: var(--white-color); 
     color: var(--white-color);
     cursor: pointer;
 }
@@ -263,21 +317,19 @@ body {
 .verticalCircle4:hover {
     opacity: 1; 
     background-color: var(--white-color);
-    border: 5px solid rgba( 255, 255, 255, 0.50 );
-    transform: scale(1.1);
+    border: 3px solid rgba( 255, 255, 255, 0.50 );
 }
 
 .visibleCircle {
     opacity: 1; 
-    transition: opacity 0.8s ease-in-out; 
-    background-color: var(--white-color);
-    border: 5px solid rgba( 255, 255, 255, 0.50 );
-    transform: scale(1.1);
+    background-color: transparent;
+    clip-path: circle();
+    border: 3px solid rgba( 255, 255, 255, 1 );
+    border-radius: 50%;
 }
 
 .hiddenCircle {
     opacity: 0.5;
-    transition: opacity 0.3s ease-in-out;
 }
 
 /* SECTION ABOUT */
@@ -287,7 +339,8 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-color: var(--white-color);
+    background-color: #181A1B;
+    overflow: hidden;
 }
 
 .leftAbout {
@@ -307,10 +360,12 @@ body {
     font-family: BLUDHAVEN;
     font-size: 120px;
     margin: 0;
+    color: var(--white-color);
     text-transform: uppercase;
 }
 
 .textAbout {
+    color: var(--white-color);
     padding-top: 20px;
     font-size: var(--white-color);
 }
@@ -368,12 +423,13 @@ body {
 /* PORTFOLIO SECTION */
 .portfolio {
     height: 100vh;
-    background-color: #111111;
+    background-color: #181A1B;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
     padding: 40px;
+    overflow: hidden;
 }
 
 /* BUTTON FILTER */
@@ -590,10 +646,11 @@ body {
 /* CONTACT SECTION */
 .contact {
     height: 100vh;
-    background-color: var(--white-color);
+    background-color: #181A1B;
     display: flex;
     flex-direction: column;
     padding: 40px;
+    overflow: hidden;
 }
 
 .rowTitleContact {
@@ -604,6 +661,7 @@ body {
 }
 
 .titleContact {
+    color: var(--white-color);
     font-weight: normal;
     font-family: BLUDHAVEN;
     font-size: 120px;
@@ -623,6 +681,7 @@ body {
 .leftForm {
     display: flex;
     flex-basis: 50%;
+    color: var(--white-color);
 }
 
 .rightForm {
@@ -668,7 +727,6 @@ body {
 
 .fa-linkedin {
     color: var(--white-color);
-    transition: all 0.5s ease-in-out;
 }
 
 .fa-linkedin:hover {
@@ -677,7 +735,6 @@ body {
 
 .fa-github {
     color: var(--white-color);
-    transition: all 0.5s ease-in-out;
 }
 
 .fa-github:hover {
@@ -744,14 +801,21 @@ textarea {
     height: 200px;
     border: none;
     background-color: transparent;
-    border-bottom: solid 1px #111111;
+    border-bottom: solid 1px var(--white-color);
+}
+
+textarea::placeholder {
+    color: var(--white-color);
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 input {
     height: 10%;
     background-color: transparent;
     border: none;
-    border-bottom: solid 1px #111111;
+    border-bottom: solid 1px var(--white-color);
+    color: var(--white-color);
 }
 
 input:focus, textarea:focus {
@@ -804,253 +868,4 @@ input:focus, textarea:focus {
 
 .success {
     color: green;
-}
-
-/* REPONSIVE */
-@media only screen and (min-width: 320px) and (max-width: 480px) {
-    .heroTitle {
-        font-size: 50px;
-    }
-    .verticalCircle1, .verticalCircle2, .verticalCircle3, .verticalCircle4 {
-        display: none;
-    }
-    .headerContainer {
-        margin: 0;
-    }
-    .navJs a {
-        font-size: 46px;
-    }
-    .navToggler:hover {
-        letter-spacing: 3px;
-    }
-    .about {
-        flex-direction: column;
-        padding: 0;
-        height: 100%;
-    }
-    .leftAbout {
-        align-items: start;
-        display: flex;
-        width: 100vw;
-        padding-left: 10px;
-    }
-    .titleAbout {
-        padding: 20px;
-        font-size: 56px;
-    }
-    .textAbout {
-        padding: 20px;
-    }
-    .imgAbout {
-        padding-top: 20px;
-        max-width: 300px;
-        max-height: 300px;
-        clip-path: circle();
-    }
-    .divImgAbout::before {
-        display: none;
-    }
-    .titlePortfolio {
-        padding-top: 20px;
-        font-size: 56px;
-    }
-    #filter-buttons button {
-        font-size: 24px;
-    }
-    #filter-buttons button:hover {
-        letter-spacing: 0;
-    }
-    #filterable-cards {
-        display: flex;
-        align-items: start;
-        justify-content: start;
-    }
-    .portfolio {
-        height: 100%;
-    }
-    .card {
-        width: 95vw;
-        height: auto; 
-    }
-    .titleHoverCard {
-        font-size: 20px;
-    }
-    .textHoverCard {
-        font-size: 14px;
-    }
-    .buttonHoverCard {
-        padding: 8px;
-        font-size: 12px;
-    }
-    .pillsHtml {
-        padding: 3px;
-        font-size: 12px;
-    }
-    .pillsCss {
-        padding: 3px;
-        font-size: 12px;
-    }
-    .pillsJs {
-        padding: 3px;
-        font-size: 12px;
-    }
-    .pillsPhp {
-        padding: 3px;
-        font-size: 12px;
-    }
-    .pillsWordpress {
-        padding: 3px;
-        font-size: 12px;
-    }
-    .contact {
-        height: 100%;
-        flex-direction: column;
-        padding: 20px 0 0 0;
-    }
-    .leftForm {
-        width: 100%;
-    }
-    .rowTitleContact {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    .titleContact {
-        font-size: 56px;
-    }
-    .rowForm {
-        flex-direction: column;
-    }
-    .mailDiv {
-        justify-content: center;
-    }
-    .socialsDiv {
-        padding: 20px 0 0 0;
-    }
-    .buttonForm {
-        width: 50%;
-    }
-    .buttonForm:hover {
-        letter-spacing: 0;
-    }
-}
-
-@media only screen and (min-width: 768px) and (max-width: 992px) {
-    .heroTitle {
-        font-size: 100px;
-    }
-    .verticalCircle1, .verticalCircle2, .verticalCircle3, .verticalCircle4 {
-        display: none;
-    }
-    .headerContainer {
-        margin: 0;
-    }
-    .navJs a {
-        font-size: 100px;
-    }
-    .navToggler:hover {
-        letter-spacing: 3px;
-    }
-    .about {
-        flex-direction: column;
-        padding: 0;
-        height: 100vh;
-    }
-    .leftAbout {
-        align-items: start;
-        display: flex;
-        width: 100vw;
-        padding-left: 10px;
-    }
-    .titleAbout {
-        padding: 20px;
-        font-size: 100px;
-    }
-    .textAbout {
-        padding: 20px;
-    }
-    .imgAbout {
-        padding: 20px;
-        max-width: 600px;
-        max-height: 600px;
-    }
-    .portfolio {
-        height: 100%;
-    }
-    .titlePortfolio {
-        padding: 20px;
-        font-size: 100px;
-    }
-    #filter-buttons button {
-        font-size: 20px;
-    }
-    #filter-buttons button:hover {
-        letter-spacing: 0;
-    }
-    .card {
-        width: 100%; 
-        height: 100%; 
-    }
-    .titleHoverCard {
-        font-size: 40px;
-    }
-    .textHoverCard {
-        font-size: 24px;
-    }
-    .buttonHoverCard {
-        font-size: 20px;
-    }
-    .pillsHtml {
-        font-size: 20px;
-    }
-    .pillsCss {
-        font-size: 20px;
-    }
-    .pillsJs {
-        font-size: 20px;
-    }
-    .pillsPhp {
-        font-size: 20px;
-    }
-    .pillsWordpress {
-        font-size: 20px;
-    }
-    .contact {
-        height: 100%;
-        flex-direction: column;
-        padding: 20px 0 0 0;
-    }
-    .leftForm {
-        width: 100%;
-    }
-    .rightForm {
-        width: 100%;
-    }
-    form {
-        font-size: 24px;
-    }
-    .rowTitleContact {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    .titleContact {
-        font-size: 56px;
-    }
-    .rowForm {
-        flex-direction: column;
-    }
-    .mailDiv {
-        justify-content: center;
-    }
-    .socialsDiv {
-        padding: 20px 0 0 0;
-    }
-    .buttonForm {
-        width: 45%;
-        font-size: 20px;
-    }
-    .buttonForm:hover {
-        letter-spacing: 0;
-    }
 }
