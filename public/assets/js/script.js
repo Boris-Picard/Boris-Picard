@@ -43,19 +43,19 @@ const scrollToSection = (selector) => {
     }
 }
 
-document.querySelector('.verticalCircle1').addEventListener('click', function() {
+document.querySelector('.verticalCircle1').addEventListener('click', () => {
     scrollToSection('#home');
 });
 
-document.querySelector('.verticalCircle2').addEventListener('click', function() {
+document.querySelector('.verticalCircle2').addEventListener('click', () => {
     scrollToSection('#about');
 });
 
-document.querySelector('.verticalCircle3').addEventListener('click', function() {
+document.querySelector('.verticalCircle3').addEventListener('click', () => {
     scrollToSection('#portfolio');
 });
 
-document.querySelector('.verticalCircle4').addEventListener('click', function() {
+document.querySelector('.verticalCircle4').addEventListener('click', () => {
     scrollToSection('#contact');
 });
 
