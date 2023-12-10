@@ -9,6 +9,7 @@ body {
     margin: 0;
 }
 
+
 /* TYPO */ 
 @font-face {
     font-family: BLUDHAVEN;
@@ -161,7 +162,7 @@ body {
 
 .heroText {
     color: var(--white-color);
-    font-size: var(--regular);
+    font-size: 24px;
     text-transform: uppercase;
 }
 
@@ -178,6 +179,11 @@ body {
 
 .heroButton:hover {
     letter-spacing: 3px;
+}
+
+#typewriter-text {
+    color: var(--primary-color);
+    font-weight: bold;
 }
 
 /* SIDE BAR */
@@ -707,6 +713,19 @@ body {
     letter-spacing: 2px;
 }
 
+label {
+    transform: translateY(-50px);
+    transition: all 0.5s ease-in-out;
+}
+
+.textAreaLabel {
+    transition: all 0.5s ease-in-out;
+}
+
+input:focus + label,input:valid + label{
+	transform:translateY(-75px);
+}
+
 form {
     display: flex;
     flex-direction: column;
@@ -725,6 +744,7 @@ textarea {
     height: 200px;
     border: none;
     background-color: transparent;
+    border-bottom: solid 1px #111111;
 }
 
 input {

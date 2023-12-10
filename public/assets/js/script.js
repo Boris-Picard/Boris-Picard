@@ -1,3 +1,45 @@
+// VANTA.NET({
+//     el: "#home",
+//     mouseControls: true,
+//     touchControls: true,
+//     gyroControls: false,
+//     minHeight: 200.00,
+//     minWidth: 200.00,
+//     scale: 1.00,
+//     scaleMobile: 1.00,
+//     color: 0xe6e6e6,
+//     backgroundColor: 0x111111,
+//     points: 5.00,
+//     maxDistance: 14.00,
+//     spacing: 20.00
+// })
+
+// Capturer l'élément canvas de Vanta.js par son ID
+const canvasElement = document.getElementById('home');
+
+// Initialisation de l'animation Vanta.js (assurez-vous d'avoir correctement configuré Vanta.js au préalable)
+const vantaEffect = VANTA.NET({
+  el: canvasElement,
+  mouseControls: true, // Activez les contrôles de la souris
+});
+
+// Écouter l'événement de mouvement de la souris
+canvasElement.addEventListener('mousemove', (event) => {
+  // Mettre à jour les propriétés de l'animation Vanta.js en fonction de la souris
+  // Par exemple, vous pouvez ajuster la rotation en fonction de la position de la souris
+  const mouseX = (event.clientX / window.innerWidth) * 2 - 1;
+  const mouseY = (event.clientY / window.innerHeight) * 2 - 1;
+
+  // Mettez à jour l'angle de la caméra en fonction de la position de la souris
+  vantaEffect.setOptions({
+    tiltX: mouseX, // Angle de rotation horizontale
+    tiltY: mouseY, // Angle de rotation verticale
+  });
+});
+
+
+
+
 const navToggler = document.querySelector(".jsNavToggler");
 const nav = document.querySelector(".jsNav");
 const linkNav = document.querySelectorAll("li")
@@ -113,3 +155,86 @@ const validEmail = () => {
 lastName.addEventListener("input", validLastname);
 firstName.addEventListener("input", validFirstName);
 email.addEventListener("input", validEmail);
+
+// SCROLL TRIGGER 
+gsap.registerPlugin(ScrollTrigger) 
+
+// gsap.to(".textAbout", {
+//     scrollTrigger: {
+//         trigger: ".textAbout",
+//         start: "top 80%", 
+//         end: "bottom 20%", 
+//         toggleActions: "restart pause restart pause" 
+//         },
+//     opacity: 1, 
+//     duration: 1, 
+//     ease: "power2.out" 
+// });
+
+
+// gsap.from(".imgAbout", {
+//     scrollTrigger: {
+//         trigger: ".imgAbout",
+//         start: "top 75%", 
+//         toggleActions: "restart pause restart pause" 
+//     },
+//     x: -200, 
+//     opacity: 0, 
+//     duration: 1.5, 
+//     ease: "expo.out" 
+// });
+
+// gsap.from(".titleAbout", {
+//     scrollTrigger: {
+//         trigger: ".titleAbout",
+//         start: "top 90%", 
+//         toggleActions: "restart pause restart pause"
+//     },
+//     scale: 0.5, 
+//     opacity: 0, 
+//     duration: 1, 
+//     ease: "back.out(1.7)" 
+// });
+
+// gsap.from(".heroTitle", {
+//     opacity: 0,      
+//     scale: 0.8,      
+//     y: -50,          
+//     duration: 1.5,  
+//     ease: "power2.out", 
+//     delay: 0.5      
+// });
+
+const texts = ["mobile", "programmation"];
+let textIndex = 0;
+let charIndex = 0;
+const typingSpeed = 0.1;
+const delayBetweenTexts = 2;
+const typewriterText = document.getElementById('typewriter-text');
+const cursor = document.getElementById('cursor');
+
+const typeWriter = () => {
+    if (charIndex < texts[textIndex].length) {
+        typewriterText.textContent += texts[textIndex].charAt(charIndex);
+        charIndex++;
+        gsap.delayedCall(typingSpeed, typeWriter);
+    } else {
+        gsap.delayedCall(delayBetweenTexts, eraseText);
+    }
+}
+
+const eraseText = () => {
+    if (typewriterText.textContent.length > 0) {
+        typewriterText.textContent = typewriterText.textContent.slice(0, -1);
+        gsap.delayedCall(typingSpeed, eraseText);
+    } else {
+        textIndex = (textIndex + 1) % texts.length;
+        charIndex = 0;
+        gsap.delayedCall(typingSpeed, typeWriter);
+    }
+}
+
+gsap.to(cursor, { opacity: 0, repeat: -1, yoyo: true, duration: 0.5 });
+
+window.onload = typeWriter;
+
