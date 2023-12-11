@@ -253,9 +253,5 @@ tl.from(".heroTitle", { opacity: 0, y: 50, delay:0.5 })
     .from(".heroButton", { opacity: 0, y: 50 }, "-=0.20")
     .from(".navToggler", { opacity: 0, y: 50 }, "-=0.20")
     .from("#social-media-icons", { opacity: 0, y: 50 }, "-=0.20")
-    .from(".fa-linkedin", { opacity: 0, y: 50 }, "-=0.20")
-    .from(".fa-github", { opacity: 0, y: 50 }, "-=0.20")
-    .from(".verticalCircle1", { opacity: 0, y: 50 }, "-=0.20")
-    .from(".verticalCircle2", { opacity: 0, y: 50 }, "-=0.20")
-    .from(".verticalCircle3", { opacity: 0, y: 50 }, "-=0.20")
-    .from(".verticalCircle4", { opacity: 0, y: 50 }, "-=0.20")
+    .from([".fa-linkedin", ".fa-github", ".verticalCircle1", ".verticalCircle2", ".verticalCircle3", ".verticalCircle4"], 
+    { opacity: 0, y: 50 }, "-=0.20");

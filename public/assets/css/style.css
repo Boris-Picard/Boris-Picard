@@ -9,14 +9,14 @@ body {
     margin: 0;
 }
 
-html {
+/* html {
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
 }
 
 section {
     scroll-snap-align: start;
-}
+} */
 
 #particles-js{
     position: absolute;
@@ -393,7 +393,55 @@ canvas {
 }
 
 /* EXPERIENCES SECTION */
+.experiences {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 100vh;
+    background-color: #181A1B;
+}
+
+.titleXpDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 10%;
+    background-color: red;
+}
+
+.titleXp {
+    font-family: BLUDHAVEN;
+    font-size: 120px;
+    color: var(--white-color);
+    text-transform: uppercase;
+}
+
+.leftXpDiv {
+    height:60%;
+    width: 50%;
+    background-color: yellow;
+}
+
+.rightXpDiv {
+    height:60%;
+    width: 50%;
+    background-color: green;
+}
+
+.skillsDiv {
+    height: 10%;
+    background-color: #00749C;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 #logo-slider {
+    background-color: #EFF2F5;
+    height: 20%;
+    width: 100%;
     overflow: hidden;
     position: relative;
 }
@@ -419,6 +467,8 @@ canvas {
         transform: translateX(-100%); 
     }
 }
+
+
 
 /* PORTFOLIO SECTION */
 .portfolio {
