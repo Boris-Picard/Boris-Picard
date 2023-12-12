@@ -22,7 +22,7 @@
     }
     .about {
         flex-direction: column;
-        padding: 0;
+        padding: 15px;
         height: 100%;
     }
     .leftAbout {
@@ -64,6 +64,7 @@
     }
     .portfolio {
         height: 100%;
+        padding: 15px;
     }
     .card {
         width: 95vw;
@@ -102,7 +103,7 @@
     .contact {
         height: 100%;
         flex-direction: column;
-        padding: 20px 0 0 0;
+        padding: 15px;
     }
     .leftForm {
         width: 100%;
@@ -139,5 +140,8 @@
     textarea::placeholder:focus {
         color: var(--white-color);
         font-family: 'Montserrat', sans-serif;
+    }
+    .experiences {
+        padding: 15px;
     }
 }

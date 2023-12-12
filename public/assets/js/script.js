@@ -255,3 +255,5 @@ tl.from(".heroTitle", { opacity: 0, y: 50, delay:0.5 })
     .from("#social-media-icons", { opacity: 0, y: 50 }, "-=0.20")
     .from([".fa-linkedin", ".fa-github", ".verticalCircle1", ".verticalCircle2", ".verticalCircle3", ".verticalCircle4"], 
     { opacity: 0, y: 50 }, "-=0.20");
+
+
