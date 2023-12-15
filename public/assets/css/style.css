@@ -85,6 +85,7 @@ canvas {
     border: none;
     background-color: transparent;
     overflow: hidden;
+    z-index: 9999999;
 }
 
 .navToggler:hover {
@@ -131,6 +132,7 @@ canvas {
 .navJs.open {
     visibility: visible;
     opacity: 1;
+    z-index: 999999;
 }
 
 .navJs ul {
@@ -252,7 +254,7 @@ canvas {
     height: 15px;
     width: 15px;
     right: 2%;
-    bottom: 60%;
+    bottom: 63%;
     clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%); 
     border: 3px solid rgba( 255, 255, 255, 0.50 ); 
     background-color: var(--white-color); 
@@ -271,7 +273,7 @@ canvas {
     height: 15px;
     width: 15px;
     right: 2%;
-    bottom: 56%;
+    bottom: 59%;
     clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%); 
     border: 3px solid rgba( 255, 255, 255, 0.50 ); 
     background-color: var(--white-color); 
@@ -290,7 +292,7 @@ canvas {
     height: 15px;
     width: 15px;
     right: 2%;
-    bottom: 52%;
+    bottom: 55%;
     clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%); 
     border: 3px solid rgba( 255, 255, 255, 0.50 ); 
     background-color: var(--white-color); 
@@ -310,7 +312,7 @@ canvas {
     height: 15px;
     width: 15px;
     right: 2%;
-    bottom: 48%;
+    bottom: 51%;
     clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%); 
     border: 3px solid rgba( 255, 255, 255, 0.50 ); 
     background-color: var(--white-color); 
@@ -319,6 +321,25 @@ canvas {
 }
 
 .verticalCircle4:hover {
+    opacity: 1; 
+    background-color: var(--white-color);
+    border: 3px solid rgba( 255, 255, 255, 0.50 );
+}
+
+.verticalCircle5 {
+    position: fixed;
+    height: 15px;
+    width: 15px;
+    right: 2%;
+    bottom: 47%;
+    clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%); 
+    border: 3px solid rgba( 255, 255, 255, 0.50 ); 
+    background-color: var(--white-color); 
+    color: var(--white-color);
+    cursor: pointer;
+}
+
+.verticalCircle5:hover {
     opacity: 1; 
     background-color: var(--white-color);
     border: 3px solid rgba( 255, 255, 255, 0.50 );
@@ -405,6 +426,7 @@ canvas {
     background-color: #181A1B;
     padding: 24px;
     justify-content: center;
+    overflow: hidden;
 }
 
 .titleXpDiv {
@@ -442,7 +464,7 @@ canvas {
 
 .rightXpDiv {
     height:66%;
-    width: 35%;
+    width: 45%;
     display: flex;
     flex-direction: column;
 }
@@ -559,18 +581,9 @@ canvas {
     color: var(--white-color);
 }
 
-.skillsDiv {
-    height: 10%;
-    background-color: #00749C;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 #logo-slider {
-    background-color: #EFF2F5;
-    height: 10%;
+    background-color: rgba( 255, 255, 255, 0.7 );
+    height: 20%;
     width: 100%;
     overflow: hidden;
     position: relative;
@@ -587,6 +600,11 @@ canvas {
     display: inline-block;
     padding: 0 20px; 
     cursor: pointer;
+}
+
+.slide img {
+    width: 85px;
+    height: 85px;
 }
 
 @keyframes slideAnimation {
@@ -913,11 +931,11 @@ canvas {
     color: #0A66C2;
 }
 
-.fa-github {
+.github {
     color: var(--white-color);
 }
 
-.fa-github:hover {
+.github:hover {
     color: var(--primary-color);
 }
 

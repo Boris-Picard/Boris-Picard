@@ -32,8 +32,10 @@ const toggleCircle = (sceneSelector, circleClass) => {
 
 toggleCircle("#home", ".verticalCircle1");
 toggleCircle("#about", ".verticalCircle2");
-toggleCircle("#portfolio", ".verticalCircle3");
-toggleCircle("#contact", ".verticalCircle4");
+toggleCircle("#experiences", ".verticalCircle3");
+toggleCircle("#portfolio", ".verticalCircle4");
+toggleCircle("#contact", ".verticalCircle5");
+
 
 // FONCTION POUR SCROLL A LA BONNE SECTION AU CLICK SUR UN CERCLE
 const scrollToSection = (selector) => {
@@ -52,10 +54,14 @@ document.querySelector('.verticalCircle2').addEventListener('click', () => {
 });
 
 document.querySelector('.verticalCircle3').addEventListener('click', () => {
-    scrollToSection('#portfolio');
+    scrollToSection('#experiences');
 });
 
 document.querySelector('.verticalCircle4').addEventListener('click', () => {
+    scrollToSection('#portfolio');
+});
+
+document.querySelector('.verticalCircle5').addEventListener('click', () => {
     scrollToSection('#contact');
 });
 
@@ -220,7 +226,7 @@ gsap.utils.toArray('.from-left').forEach((element, i) => {
         scrollTrigger: {
             trigger: element,
             start: "top bottom",
-            toggleActions: "restart pause restart pause"
+            toggleActions: "play play none none"
         },
         x: -window.innerWidth, 
         duration: 1.5,
@@ -235,7 +241,7 @@ gsap.utils.toArray('.from-right').forEach((element, i) => {
         scrollTrigger: {
             trigger: element,
             start: "top bottom",
-            toggleActions: "restart pause restart pause"
+            toggleActions: "play none none none"
         },
         x: window.innerWidth, 
         duration: 1.5,
@@ -253,7 +259,7 @@ tl.from(".heroTitle", { opacity: 0, y: 50, delay:0.5 })
     .from(".heroButton", { opacity: 0, y: 50 }, "-=0.20")
     .from(".navToggler", { opacity: 0, y: 50 }, "-=0.20")
     .from("#social-media-icons", { opacity: 0, y: 50 }, "-=0.20")
-    .from([".fa-linkedin", ".fa-github", ".verticalCircle1", ".verticalCircle2", ".verticalCircle3", ".verticalCircle4"], 
+    .from([".fa-linkedin", ".github", ".verticalCircle1", ".verticalCircle2", ".verticalCircle3", ".verticalCircle4",".verticalCircle5"], 
     { opacity: 0, y: 50 }, "-=0.20");
 
 
