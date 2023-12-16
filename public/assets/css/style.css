@@ -446,10 +446,11 @@ canvas {
 }
 
 .leftXpDiv {
-    height:66%;
-    width: 50%;
+    height:60%;
+    width: 40%;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .leftXpDiv h3 {
@@ -463,10 +464,11 @@ canvas {
 }
 
 .rightXpDiv {
-    height:66%;
-    width: 45%;
+    height:60%;
+    width: 40%;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .rightXpDiv h3 {
@@ -485,6 +487,7 @@ canvas {
     border-left: 2px solid rgba(255,255,255,0.2);
     position: relative;
     height: 100%;
+    width: 70%;
 }
 
 .leftXpBorder::before {
@@ -536,6 +539,7 @@ canvas {
     border-left: 2px solid rgba(255,255,255,0.2);
     position: relative;
     height: 100%;
+    width: 70%;
 }
 
 .rightXpBorder::before {
@@ -581,10 +585,46 @@ canvas {
     color: var(--white-color);
 }
 
-#logo-slider {
-    background-color: rgba( 255, 255, 255, 0.7 );
+.leftColSkills {
+    background: red;
+    display: flex;
+    width: 33.33%;
     height: 20%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.leftColTitle {
+    display: flex;
+    justify-content: center;
     width: 100%;
+    height: 10%;
+}
+
+.leftColSkills img {
+    width: 85px;
+    height: 85px;
+}
+
+.middleColSkills{
+    background: blue;
+    display: flex;
+    width: 33.33%;
+    height: 20%;
+}
+
+.rightColSkills {
+    background: green;
+    display: flex;
+    width: 33.33%;
+    height: 20%;
+}
+
+/* #logo-slider {
+    height: 20%;
+    width: 70%;
     overflow: hidden;
     position: relative;
 }
@@ -592,13 +632,13 @@ canvas {
 .slider {
     display: flex;
     white-space: nowrap;
-    animation: slideAnimation 20s linear infinite; 
+    animation: slideAnimation 30s linear infinite; 
 }
 
 .slide {
     flex-shrink: 0;
     display: inline-block;
-    padding: 0 20px; 
+    padding: 0 40px; 
     cursor: pointer;
 }
 
@@ -612,16 +652,14 @@ canvas {
         transform: translateX(100%); 
     }
     100% {
-        transform: translateX(-100%); 
+        transform: translateX(-120%); 
     }
-}
-
-
+} */
 
 /* PORTFOLIO SECTION */
 .portfolio {
     height: 100vh;
-    background-color: #181A1B;
+    background-color: #181a1b;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -665,6 +703,7 @@ canvas {
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
+    height: 70%;
 }
 
 #filterable-cards .card {
