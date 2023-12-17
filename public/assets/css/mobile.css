@@ -2,7 +2,7 @@
     .heroTitle {
         font-size: 50px;
     }
-    .verticalCircle1, .verticalCircle2, .verticalCircle3, .verticalCircle4 {
+    .verticalCircle1, .verticalCircle2, .verticalCircle3, .verticalCircle4, .verticalCircle5 {
         display: none;
     }
     #social-media-icons {
@@ -26,23 +26,30 @@
         height: 100%;
     }
     .leftAbout {
-        align-items: start;
+        align-items: center;
+        justify-content: center;
         display: flex;
-        width: 100vw;
+        width: 100%;
         padding-left: 10px;
     }
-    .titleAbout {
+    .titleAboutDiv h2 {
         padding: 20px;
         font-size: 56px;
-    }
-    .textAbout {
-        padding: 20px;
     }
     .imgAbout {
         padding-top: 20px;
         max-width: 300px;
         max-height: 300px;
         clip-path: circle();
+    }
+    .rightAbout {
+        width: 100%;
+        padding: 0;
+    }
+    .divImgAbout {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
     }
     .divImgAbout::before {
         display: none;
@@ -143,5 +150,25 @@
     }
     .experiences {
         padding: 15px;
+        flex-direction: row;
+        height: 100%;
+    }
+    .titleXp {
+        font-size: 50px;
+        padding: 10px;
+        margin: 0;
+    }
+    .leftXpDiv {
+        width: 100%;
+    }
+    .rightXpDiv {
+        width: 100%;
+    }
+    .skillsRow {
+        flex-direction: column;
+        padding: 10px 0;
+    }
+    .incomingColSkills {
+        padding: 0 0 20px 0;
     }
 }
