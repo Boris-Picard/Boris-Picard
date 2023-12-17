@@ -424,7 +424,6 @@ canvas {
     flex-wrap: wrap;
     height: 100vh;
     background-color: #181A1B;
-    padding: 24px;
     justify-content: center;
     overflow: hidden;
 }
@@ -435,7 +434,7 @@ canvas {
     align-items: center;
     width: 100%;
     height: 10%;
-    padding: 0 0 20px 0;
+    padding: 24px 0;
 }
 
 .titleXp {
@@ -586,10 +585,10 @@ canvas {
 }
 
 .leftColSkills {
-    background: red;
+    background: rgba(255,255,255,0.15);
     display: flex;
-    width: 33.33%;
-    height: 20%;
+    width: 25%;
+    height: 25%;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
@@ -597,6 +596,37 @@ canvas {
 }
 
 .leftColTitle {
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    font-size: 26px;
+    width: 100%;
+    height: 10%;
+    color: var(--white-color);
+}
+
+.middleColTitle {
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    font-size: 26px;
+    width: 100%;
+    height: 10%;
+    color: var(--white-color);
+}
+
+.rightColTitle {
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    font-size: 26px;
+    width: 100%;
+    height: 10%;
+    color: var(--white-color);
+}
+
+.incomingSkillsTitle {
+    text-transform: uppercase;
     display: flex;
     justify-content: center;
     font-size: 26px;
@@ -606,22 +636,51 @@ canvas {
 }
 
 .leftColSkills img {
-    width: 85px;
-    height: 85px;
+    width: 75px;
+    height: 75px;
 }
 
-.middleColSkills{
-    background: blue;
+.middleColSkills img {
+    width: 75px;
+    height: 75px;
+}
+
+.rightColSkills img {
+    width: 75px;
+    height: 75px;
+}
+
+.middleColSkills {
+    background: rgba(255,255,255,0.15);
     display: flex;
-    width: 33.33%;
-    height: 20%;
+    width: 25%;
+    height: 25%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
 }
 
 .rightColSkills {
-    background: green;
+    background: rgba(255,255,255,0.15);
     display: flex;
-    width: 33.33%;
-    height: 20%;
+    width: 25%;
+    height: 25%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.incomingColSkills {
+    display: flex;
+    background: rgba(255,255,255,0.15);
+    width: 25%;
+    height: 25%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
 }
 
 .html {
@@ -668,10 +727,102 @@ canvas {
     filter: brightness(0) saturate(100%) invert(100%);
 }
 
+.php {
+    color: #777BB3;
+    transition: color 0.5s ease-in-out;
+}
+
+.php:hover {
+    color: var(--white-color);
+}
+
+.githubSkills {
+    color: var(--white-color);
+    transition: color 0.5s ease-in-out;
+}
+
+.githubSkills:hover {
+    color: var(--primary-color);
+}
+
+.mySql {
+    transition: filter 0.5s ease-in-out;
+}
+
+.mySql:hover {
+    filter: brightness(0) saturate(100%) invert(100%);
+}
+
+.figma {
+    transition: filter 0.5s ease-in-out;
+}
+
+.figma:hover {
+    filter: brightness(0) saturate(100%) invert(100%);
+}
+
+.wordpress {
+    color: #00749C;
+    transition: color 0.5s ease-in-out;
+}
+
+.wordpress:hover {
+    color: var(--white-color);
+}
+
+.react {
+    color: #61DBFB;
+    transition: color 0.5s ease-in-out;
+}
+
+.react:hover {
+    color: var(--white-color);
+}
+
+.vueJs {
+    color: #41B883;
+    transition: color 0.5s ease-in-out;
+}
+
+.vueJs:hover {
+    color: var(--white-color);
+}
+
+.nodeJs {
+    color: #68a063;
+    transition: color 0.5s ease-in-out;
+}
+
+.nodeJs:hover {
+    color: var(--white-color);
+}
+
+.symfony {
+    transition: color 0.5s ease-in-out;
+    color: var(--white-color);
+}
+
+.symfony:hover {
+    color: var(--primary-color);
+}
+
+.fa-circle-exclamation  {
+    color: #d8c545;
+    padding: 10px 0;
+}
+
+.modal span {
+    font-weight: bold;
+    font-size: 20px;
+}
+
 #open {
     background: transparent;
     border: none;
     cursor: pointer;
+    height: fit-content;
+    width: fit-content;
+    padding: 0;
 }
 
 .close {
@@ -729,8 +880,8 @@ canvas {
 .modal li {
     margin: 0;
     padding: 5px 0;
-    font-weight: normal;
     color: #181A1B;
+    font-size: 20px;
 }
 
 .modal button {
