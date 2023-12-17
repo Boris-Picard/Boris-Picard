@@ -2,6 +2,9 @@
     .heroTitle {
         font-size: 50px;
     }
+    .heroText {
+        text-align: center;
+    }
     .verticalCircle1, .verticalCircle2, .verticalCircle3, .verticalCircle4, .verticalCircle5 {
         display: none;
     }
@@ -113,6 +116,9 @@
         padding: 15px;
     }
     .leftForm {
+        width: 100%;
+    }
+    .rightForm {
         width: 100%;
     }
     .rowTitleContact {

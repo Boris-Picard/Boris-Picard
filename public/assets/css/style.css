@@ -231,6 +231,7 @@ canvas {
     cursor: pointer;
     z-index: 9;
     border: none;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .heroButton:hover {
@@ -386,6 +387,7 @@ canvas {
 
 .textAbout {
     color: var(--primary-color);
+    font-weight: bold;
 }
 
 .titleAboutDiv {
@@ -411,6 +413,7 @@ canvas {
     letter-spacing: 1px;
     color: var(--white-color);
 }
+
 
 .imgAbout {
     object-fit: cover;
@@ -471,7 +474,7 @@ canvas {
     align-items: center;
 }
 
-.leftXpDiv h3 {
+.leftXpDiv h2 {
     padding: 0 0 0 20px;
     font-size: 26px;
     font-weight: 700;
@@ -489,7 +492,7 @@ canvas {
     align-items: center;
 }
 
-.rightXpDiv h3 {
+.rightXpDiv h2 {
     padding: 0 0 0 20px;
     font-size: 26px;
     font-weight: 700;
@@ -520,7 +523,7 @@ canvas {
     border: 2px solid var(--primary-color);
 }
 
-.leftXpBorder h4 {
+.leftXpBorder h3 {
     line-height: 18px;
     font-size: 18px;
     text-transform: uppercase;
@@ -528,7 +531,7 @@ canvas {
     margin: 2px 0 5px 0;
 }
 
-.leftXpBorder h5 {
+.leftXpBorder h4 {
     font-size: 16px;
     background: rgba(255,255,255,0.15);
     padding: 5px 15px;
@@ -572,7 +575,7 @@ canvas {
     border: 2px solid var(--primary-color);
 }
 
-.rightXpBorder h4 {
+.rightXpBorder h3 {
     line-height: 18px;
     font-size: 18px;
     text-transform: uppercase;
@@ -580,7 +583,7 @@ canvas {
     margin: 2px 0 5px 0;
 }
 
-.rightXpBorder h5 {
+.rightXpBorder h4 {
     font-size: 16px;
     background: rgba(255,255,255,0.15);
     padding: 5px 15px;
@@ -828,12 +831,13 @@ canvas {
     padding: 10px 0;
 }
 
-.modal span {
+.modal p {
     font-weight: bold;
     font-size: 20px;
+    color: #181A1B;
 }
 
-#open {
+.open {
     background: transparent;
     border: none;
     cursor: pointer;
@@ -1051,6 +1055,7 @@ canvas {
     transition: .5s ease-in-out;
     cursor: pointer;
     border: none;
+    text-decoration: none;
 }
 
 .buttonHoverCard:hover {

@@ -3,6 +3,14 @@ particlesJS.load('particles-js', '/public/assets/js/particlesjs-config.json', fu
     console.log('callback - particles.js config loaded');
 });
 
+// SCREEN WIDTH BACKGROUND
+if(window.screen.width <= 320 || window.screen.width <= 480) {
+    const particleJs = document.getElementById('particles-js')
+    const backgroundHero = document.getElementById('home')
+    particleJs.style.display = 'none';
+    backgroundHero.style.background = '#181A1B'
+}
+
 // TRACK CHANGEMENT DE SECTION
 const toggleCircle = (sceneSelector, circleClass) => {
     gsap.timeline({
@@ -37,7 +45,7 @@ toggleCircle("#portfolio", ".verticalCircle4");
 toggleCircle("#contact", ".verticalCircle5");
 
 // MODAL
-const open = document.querySelectorAll('#open');
+const open = document.querySelectorAll('.open');
 const modalContainer = document.querySelectorAll('.modalContainer');
 const close = document.querySelectorAll('.close');
 
