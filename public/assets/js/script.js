@@ -36,6 +36,22 @@ toggleCircle("#experiences", ".verticalCircle3");
 toggleCircle("#portfolio", ".verticalCircle4");
 toggleCircle("#contact", ".verticalCircle5");
 
+// MODAL
+const open = document.querySelectorAll('#open');
+const modalContainer = document.querySelectorAll('.modalContainer');
+const close = document.querySelectorAll('.close');
+
+open.forEach((button, index) => {
+    button.addEventListener('click', () => {
+        modalContainer[index].classList.add('show');
+    });
+});
+
+close.forEach(element => {
+    element.addEventListener('click', () => {
+        element.closest('.modalContainer').classList.remove('show'); 
+    })
+});
 
 // FONCTION POUR SCROLL A LA BONNE SECTION AU CLICK SUR UN CERCLE
 const scrollToSection = (selector) => {
@@ -100,28 +116,6 @@ const filterCards = (e) => {
 }
 
 filterButtons.forEach(button => button.addEventListener("click", filterCards));
-
-// SLIDER LOGOS
-const slider = document.querySelector('.slider');
-const slides = Array.from(slider.children);
-// Fonction pour mettre en pause l'animation
-function pauseAnimation() {
-    slider.style.animationPlayState = 'paused';
-}
-
-function resumeAnimation() {
-    slider.style.animationPlayState = 'running';
-}
-
-slider.addEventListener('mouseenter', pauseAnimation);
-
-slider.addEventListener('mouseleave', resumeAnimation);
-
-slides.forEach(slide => {
-    slide.addEventListener('click', () => {
-        alert('Vous avez cliqué sur un logo !'); 
-    });
-});
 
 // FORMULAIRE DYNAMIQUE REGEX 
 const firstName = document.getElementById("firstname");

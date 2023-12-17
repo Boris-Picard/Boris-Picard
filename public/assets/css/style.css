@@ -32,8 +32,8 @@ canvas {
 
 /* TYPO */ 
 @font-face {
-    font-family: BLUDHAVEN;
-    src: url("../typo/BLUDHAVEN.ttf");
+    font-family: MADEBonVoyageRegular;
+    src: url("../typo/MADEBonVoyageRegular.otf");
 }
 
 /* SOCIAL LEFT */
@@ -206,7 +206,7 @@ canvas {
 }
 
 .heroTitle {
-    font-family: BLUDHAVEN;
+    font-family: MADEBonVoyageRegular;
     text-transform: uppercase;
     font-size: 200px;
     color: var(--white-color);
@@ -382,7 +382,7 @@ canvas {
 }
 
 .titleAbout {
-    font-family: BLUDHAVEN;
+    font-family: MADEBonVoyageRegular;
     font-size: 120px;
     margin: 0;
     color: var(--white-color);
@@ -439,7 +439,7 @@ canvas {
 }
 
 .titleXp {
-    font-family: BLUDHAVEN;
+    font-family: MADEBonVoyageRegular;
     font-size: 120px;
     color: var(--white-color);
     text-transform: uppercase;
@@ -599,8 +599,10 @@ canvas {
 .leftColTitle {
     display: flex;
     justify-content: center;
+    font-size: 26px;
     width: 100%;
     height: 10%;
+    color: var(--white-color);
 }
 
 .leftColSkills img {
@@ -622,39 +624,127 @@ canvas {
     height: 20%;
 }
 
-/* #logo-slider {
-    height: 20%;
-    width: 70%;
-    overflow: hidden;
-    position: relative;
+.html {
+    color: #FF5733;
+    transition: color 0.5s ease-in-out;
 }
 
-.slider {
-    display: flex;
-    white-space: nowrap;
-    animation: slideAnimation 30s linear infinite; 
+.html:hover {
+    color: var(--white-color);
 }
 
-.slide {
-    flex-shrink: 0;
-    display: inline-block;
-    padding: 0 40px; 
+.css {
+    color: #0A66C2;
+    transition: color 0.5s ease-in-out;
+}
+
+.css:hover {
+    color: var(--white-color);
+}
+
+.javascript {
+    color: #d8c545;
+    transition: color 0.5s ease-in-out;
+}
+
+.javascript:hover {
+    color: var(--white-color);
+}
+
+.bootstrap {
+    color: #7952B3;
+    transition: color 0.5s ease-in-out;
+}
+
+.bootstrap:hover {
+    color: var(--white-color);
+}
+
+.tailwind {
+    transition: filter 0.5s ease-in-out;
+}
+
+.tailwind:hover {
+    filter: brightness(0) saturate(100%) invert(100%);
+}
+
+#open {
+    background: transparent;
+    border: none;
     cursor: pointer;
 }
 
-.slide img {
-    width: 85px;
-    height: 85px;
+.close {
+    background: #181A1B;
+    color: var(--white-color);
 }
 
-@keyframes slideAnimation {
-    0% {
-        transform: translateX(100%); 
-    }
-    100% {
-        transform: translateX(-120%); 
-    }
-} */
+.modalContainer {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.50);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    color: var(--white-color);
+    pointer-events: none;
+    transition: opacity 0.5s ease-in-out;
+    z-index: 99999999;
+}
+
+.modalContainer.show {
+    pointer-events: auto;
+    opacity: 1;
+}
+
+.modal {
+    background: var(--white-color);
+    width: 600px;
+    max-width: 100%;
+    padding: 30px 50px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.modal h5 {
+    color: #181A1B;
+    font-size: 24px;
+    margin: 0;
+    padding: 10px 0;
+}
+
+.modal ul {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 0;
+    color: #181A1B;
+}
+
+.modal li {
+    margin: 0;
+    padding: 5px 0;
+    font-weight: normal;
+    color: #181A1B;
+}
+
+.modal button {
+    padding: 15px;
+    border-radius: 30px;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.5s ease-in-out;
+}
+
+.modal button:hover {
+    letter-spacing: 2px;
+}
 
 /* PORTFOLIO SECTION */
 .portfolio {
@@ -815,7 +905,7 @@ canvas {
     text-transform: uppercase;
     background-color: #FF5733;
     border:none;
-    color:white;
+    color:var(--white-color);
     font-weight: bold;
 }
 
@@ -825,7 +915,7 @@ canvas {
     text-transform: uppercase;
     background-color: #264de4;
     border:none;
-    color:white;
+    color:var(--white-color);
     font-weight: bold;
 }
 
@@ -835,7 +925,7 @@ canvas {
     border-radius: 30px;
     text-transform: uppercase;
     border:none;
-    color:white;
+    color:var(--white-color);
     font-weight: bold;
 }
 
@@ -845,7 +935,7 @@ canvas {
     border-radius: 30px;
     text-transform: uppercase;
     border:none;
-    color:white;
+    color:var(--white-color);
     font-weight: bold;
 }
 
@@ -855,7 +945,7 @@ canvas {
     border-radius: 30px;
     text-transform: uppercase;
     border:none;
-    color:white;
+    color:var(--white-color);
     font-weight: bold;
 }
 
@@ -874,7 +964,7 @@ canvas {
 
 .titlePortfolio {
     font-size: 120px;
-    font-family: BLUDHAVEN;
+    font-family: MADEBonVoyageRegular;
     color: var(--white-color);
     font-weight: normal;
     text-transform: uppercase;
@@ -900,7 +990,7 @@ canvas {
 .titleContact {
     color: var(--white-color);
     font-weight: normal;
-    font-family: BLUDHAVEN;
+    font-family: MADEBonVoyageRegular;
     font-size: 120px;
     margin: 0;
     padding: 40px;
