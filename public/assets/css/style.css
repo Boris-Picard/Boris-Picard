@@ -212,6 +212,7 @@ canvas {
     color: var(--white-color);
     margin: 0;
     font-weight: normal;
+    text-align: center;
     z-index: 1;
 }
 
@@ -1151,6 +1152,7 @@ canvas {
     flex-direction: column;
     padding: 24px;
     overflow: hidden;
+    align-items: center;
 }
 
 .rowTitleContact {
@@ -1172,200 +1174,54 @@ canvas {
 
 .rowForm {
     display: flex;
-    height: 80%;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    align-items: center;
+    height: 100%;
+}
+
+.colForm {
+    background-color: red;
+    width: 40%;
+    height: 70%;
+    display: flex;
     justify-content: center;
-}
-
-.leftForm {
-    display: flex;
-    flex-basis: 50%;
-    color: var(--white-color);
-}
-
-.rightForm {
-    display: flex;
-    flex-basis: 30%;
-    height: 80%;
-    background-color: #111111;
-    border-radius: 10px;
-    padding: 20px;
+    padding: 24px;
     flex-direction: column;
-    align-items: center;
-}
-
-.separator {
-    display: flex;
-    margin-top: 35px;
-    color: var(--white-color);
-}
-
-.separatorSocials {
-    display: flex;
-    color: var(--white-color);
-    margin-top: 35px;
-}
-
-.mailDiv {
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    width: 70%;
-}
-
-.socialsDiv {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-}
-
-.fa-envelope{
-    color: var(--white-color);
-}
-
-.fa-linkedin {
-    color: var(--white-color);
-}
-
-.fa-linkedin:hover {
-    color: #0A66C2;
-}
-
-.github {
-    color: var(--white-color);
-}
-
-.github:hover {
-    color: var(--primary-color);
-}
-
-.mailContact {
-    text-decoration: none;
-    color: var(--white-color);
-    font-size: 24px;
-    padding: 20px 0 20px 20px;
-    letter-spacing: 1px;
-    transition: all 0.5s ease-in-out;
-}
-
-.mailContact:hover {
-    color: var(--primary-color);
-}
-
-.titleMailContact {
-    color: var(--white-color);
-    font-size: 26px;
-    text-transform: uppercase;
-    height: 5%;
-    letter-spacing: 2px;
-}
-
-.titleSocials {
-    color: var(--white-color);
-    font-size: 26px;
-    text-transform: uppercase;
-    height: 5%;
-    letter-spacing: 2px;
-}
-
-label {
-    transform: translateY(-50px);
-    transition: all 0.5s ease-in-out;
-}
-
-.textAreaLabel {
-    transition: all 0.5s ease-in-out;
-}
-
-input:focus + label,input:valid + label{
-	transform:translateY(-75px);
 }
 
 form {
     display: flex;
     flex-direction: column;
-    gap: 20px;
     width: 100%;
-    background: rgba( 255, 255, 255, 0.25 );
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-    backdrop-filter: blur( 4px );
-    -webkit-backdrop-filter: blur( 4px );
-    border-radius: 10px;
-    border: 1px solid rgba( 255, 255, 255, 0.18 );
-    padding: 20px;
+    height: 100%;
+    align-items: center;
 }
 
-textarea {
-    height: 200px;
-    border: none;
-    background-color: transparent;
-    border-bottom: solid 1px var(--white-color);
-}
-
-textarea::placeholder {
-    color: var(--white-color);
-    font-size: 16px;
-    font-family: 'Montserrat', sans-serif;
-}
-
-input {
-    height: 10%;
-    background-color: transparent;
-    border: none;
-    border-bottom: solid 1px var(--white-color);
-    color: var(--white-color);
-}
-
-input:focus, textarea:focus {
-    outline: none;
-    transition: border 0.2s ease-in-out;
-    border-bottom: 2px solid #f18701;
-}
-
-.buttonDivForm {
-    width: 100%;
+.formSocials {
     display: flex;
+    width: 100%;
+    height: 30%;
     justify-content: center;
 }
 
-.buttonForm {
+.formSocials h5 {
+    color: var(--white-color);
+    font-size: 30px;
     text-transform: uppercase;
-    background-color: #111111;
-    padding: 25px;
-    border-radius: 30px;
-    font-weight: bold;
-    transition: .5s ease-in-out;
-    cursor: pointer;
+}
+
+#firstname {
+    width: 40%;
+    height: 4%;
+    background: transparent;
     border: none;
     color: var(--white-color);
-}
-
-.buttonForm:hover {
-    letter-spacing: 5px;
-    background-color: var(--primary-color);
-}
-
-#nameMsgError {
-    display: none;
+    font-size: 18px;
     font-weight: bold;
+    border-bottom: 2px solid var(--white-color);
 }
 
-#lastnameMsgError {
-    display: none;
-    font-weight: bold;
-}
-
-#emailMsgError {
-    display: none;
-    font-weight: bold;
-}
-
-.error {
-    color: red;
-}
-
-.success {
-    color: green;
+#firstname:focus {
+    outline: none;
 }

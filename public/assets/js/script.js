@@ -7,8 +7,10 @@ particlesJS.load('particles-js', '/public/assets/js/particlesjs-config.json', fu
 if(window.screen.width <= 320 || window.screen.width <= 480) {
     const particleJs = document.getElementById('particles-js')
     const backgroundHero = document.getElementById('home')
+    const imgAbout = document.querySelector('.imgAbout')
     particleJs.style.display = 'none';
     backgroundHero.style.background = '#181A1B'
+    imgAbout.src = "/public/assets/img/mobileAbout.png"
 }
 
 // TRACK CHANGEMENT DE SECTION
@@ -125,71 +127,12 @@ const filterCards = (e) => {
 
 filterButtons.forEach(button => button.addEventListener("click", filterCards));
 
-// FORMULAIRE DYNAMIQUE REGEX 
-const firstName = document.getElementById("firstname");
-const regFirstName = /^[A-Za-z-éèêëàâäôöûüç' ]+$/;
-const lastName = document.getElementById("lastname")
-const lastnameMsgError = document.getElementById("lastnameMsgError")
-const msgError = document.getElementById("nameMsgError")
-const email = document.getElementById("email");
-const mailMsgError = document.getElementById("emailMsgError")
-const regEmail = /^[a-zA-Z0-9_\.\-]+@[a-zA-Z0-9_\-]+\.[a-zA-Z]{2,5}$/;
-
-const validFirstName = () => {
-    firstName.classList.remove("success", "error");
-    msgError.style.display = "none";
-    if (firstName.value.length < 2 && firstName.value == "") {
-        return;
-    };
-    if (regFirstName.test(firstName.value) != true) {
-        msgError.textContent = "Caractères non autorisés";
-        msgError.style.display = "block"
-        msgError.classList.add("error");
-    } else {
-        msgError.style.display = "none";
-    };
-};
-
-const validLastname = () => {
-    lastName.classList.remove("success", "error");
-    lastnameMsgError.style.display = "none";
-    if (lastName.value.length < 2 && lastName.value == "") {
-        return;
-    };
-    if (regFirstName.test(lastName.value) != true) {
-        lastnameMsgError.textContent = "Caractères non autorisés";
-        lastnameMsgError.style.display = "block"
-        lastnameMsgError.classList.add("error");
-    } else {
-        lastnameMsgError.style.display = "none";
-    };
-};
-
-const validEmail = () => {
-    email.classList.remove("success", "error");
-    mailMsgError.style.display = "none";
-    if (email.value.length < 2 && email.value == "") {
-        return;
-    };
-    if (regEmail.test(email.value) != true) {
-        mailMsgError.textContent = "Veuillez entrer un mail valide";
-        mailMsgError.style.display = "block"
-        mailMsgError.classList.add("error");
-    } else {
-        mailMsgError.style.display = "none";
-    };
-};
-
-lastName.addEventListener("input", validLastname);
-firstName.addEventListener("input", validFirstName);
-email.addEventListener("input", validEmail);
-
 // SCROLL TRIGGER ET GSAP
 gsap.registerPlugin(ScrollTrigger) 
 
 
 // FONCTION POUR REMPLACER DYNAMIQUEMENT UN MOT
-const texts = ["mobile", "programmation"];
+const texts = ["et web mobile", "front-end", "back-end"];
 let textIndex = 0;
 let charIndex = 0;
 const typingSpeed = 0.1;

@@ -84,7 +84,7 @@
         font-size: 20px;
     }
     .textHoverCard {
-        font-size: 14px;
+        font-size: 16px;
     }
     .buttonHoverCard {
         padding: 8px;
@@ -115,12 +115,6 @@
         flex-direction: column;
         padding: 15px;
     }
-    .leftForm {
-        width: 100%;
-    }
-    .rightForm {
-        width: 100%;
-    }
     .rowTitleContact {
         flex-direction: column;
         justify-content: center;
@@ -128,24 +122,6 @@
     }
     .titleContact {
         font-size: 50px;
-    }
-    .rowForm {
-        flex-direction: column;
-    }
-    .mailDiv {
-        justify-content: center;
-    }
-    .mailContact {
-        font-size: 21px;
-    }
-    .socialsDiv {
-        padding: 20px 0 0 0;
-    }
-    .buttonForm {
-        width: 50%;
-    }
-    .buttonForm:hover {
-        letter-spacing: 0;
     }
     html {
         scroll-snap-type: none;

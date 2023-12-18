@@ -42,14 +42,14 @@
         <!-- HERO PAGE -->
         <section class="heroPage home" id="home">
             <h1 class="heroTitle">boris picard</h1>
-            <p class="heroText typewriter">développeur web et web <span id="typewriter-text"></span><span id="cursor">|</span></p>
+            <p class="heroText typewriter">développeur web <span id="typewriter-text"></span><span id="cursor">|</span></p>
             <button class="heroButton">télécharger mon cv</button>
             <div id="particles-js">
             </div>
         </section>
         <!-- ABOUT -->
         <section class="about" id="about">
-            <div class="titleAboutDiv">
+            <div class="titleAboutDiv from-left">
                 <h2>a propos</h2>
             </div>
             <div class="leftAbout from-left">
@@ -379,7 +379,7 @@
             </div>
             <div id="filterable-cards" class="from-left">
                 <div class="card" data-name="front">
-                    <img src="/public/assets/img/yams.png" alt="Jeu du yams">
+                    <img src="/public/assets/img/yams.avif" alt="Jeu du yams">
                     <div class="hover-overlay">
                         <div class="pillsRow">
                             <button class="pillsHtml">html</button>
@@ -394,7 +394,7 @@
                     </div>
                 </div>
                 <div class="card" data-name="front">
-                    <img src="/public/assets/img/pendu.png" alt="Jeu du pendu">
+                    <img src="/public/assets/img/pendu.avif" alt="Jeu du pendu">
                     <div class="hover-overlay">
                         <div class="pillsRow">
                             <button class="pillsHtml">html</button>
@@ -409,7 +409,7 @@
                     </div>
                 </div>
                 <div class="card" data-name="front">
-                    <img src="/public/assets/img/fetchjson.png" alt="fetch json projet">
+                    <img src="/public/assets/img/fetchjson.avif" alt="fetch json projet">
                     <div class="hover-overlay">
                         <div class="pillsRow">
                             <button class="pillsHtml">html</button>
@@ -424,7 +424,7 @@
                     </div>
                 </div>
                 <div class="card" data-name="back">
-                    <img src="/public/assets/img/tpformulairephp.png" alt="Formulaire projet">
+                    <img src="/public/assets/img/tpformulairephp.avif" alt="Formulaire projet">
                     <div class="hover-overlay">
                         <div class="pillsRow">
                             <button class="pillsHtml">html</button>
@@ -439,7 +439,7 @@
                     </div>
                 </div>
                 <div class="card" data-name="wordpress">
-                    <img src="/public/assets/img/wordpress.png" alt="Wordpress projet">
+                    <img src="/public/assets/img/wordpress.avif" alt="Wordpress projet">
                     <div class="hover-overlay">
                         <div class="pillsRow">
                             <button class="pillsHtml">html</button>
@@ -461,69 +461,14 @@
                 <h2 class="titleContact">me contacter</h2>
             </div>
             <div class="rowForm">
-                <div class="leftForm from-left">
+                <div class="colForm">
+                    <div class="formSocials">
+                        <h5>mes réseaux</h5>
+                    </div>
                     <form>
-                        <span id="nameMsgError"></span>
-                        <input 
-                        type="text" 
-                        name="firstname" 
-                        id="firstname" 
-                        placeholder=""
-                        required
-                        autocomplete="given-name"
-                        maxlength="70"
-                        >
-                        <label for="firstname">Prénom*</label>
-                        <span id="lastnameMsgError"></span>
-                        <input 
-                        type="text" 
-                        name="lastname" 
-                        id="lastname" 
-                        placeholder=""
-                        required
-                        autocomplete="family-name"
-                        maxlength="70"
-                        >
-                        <label for="lastname">Nom*</label>
-                        <span id="emailMsgError"></span>
-                        <input 
-                        type="email" 
-                        name="email" 
-                        id="email" 
-                        autocomplete="email"
-                        placeholder=""
-                        required  
-                        >
-                        <label for="email">Email*</label>
-                        <textarea 
-                        id="textArea" 
-                        name="textArea"
-                        placeholder="Message*"
-                        maxlength="5000"
-                        required
-                        ></textarea>
-                        <div class="buttonDivForm">
-                            <button type="submit" class="buttonForm">Envoyer</button>
-                        </div>
+                        <label for="firstname">Prénom</label>
+                        <input type="text" name="firstname" id="firstname">
                     </form>
-                </div>
-                <div class="rightForm from-right">
-                    <div>
-                        <h3 class="titleMailContact">Mon mail</h3>
-                        <hr class="separator">
-                    </div>
-                    <div class="mailDiv">
-                        <i class="fa-solid fa-envelope fa-2x"></i>
-                        <a href="mailto:boris.picard@gmail.com" aria-label="Adresse mail" target="_blank" class="mailContact">boris.picard@gmail.com</a>
-                    </div>
-                    <div>
-                        <h3 class="titleSocials">Mes réseaux</h3>
-                        <hr class="separatorSocials">
-                    </div>
-                    <div class="socialsDiv">
-                        <a href="https://www.linkedin.com/in/boris-picard-2906029b/" aria-label="Linkedin Social" target="_blank"><i class="fa-brands fa-linkedin fa-2x"></i></a>
-                        <a href="https://github.com/Boris-Picard" aria-label="Github Social" target="_blank"><i class="fa-brands fa-github github fa-2x"></i></a>
-                    </div>
                 </div>
             </div>
         </section>

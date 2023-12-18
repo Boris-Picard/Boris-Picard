@@ -107,15 +107,6 @@
         flex-direction: column;
         padding: 20px;
     }
-    .leftForm {
-        width: 88%;
-    }
-    .rightForm {
-        width: 83%;
-    }
-    form {
-        font-size: 24px;
-    }
     .rowTitleContact {
         flex-direction: column;
         justify-content: center;
@@ -123,22 +114,6 @@
     }
     .titleContact {
         font-size: 56px;
-    }
-    .rowForm {
-        flex-direction: column;
-    }
-    .mailDiv {
-        justify-content: center;
-    }
-    .socialsDiv {
-        padding: 20px 0 0 0;
-    }
-    .buttonForm {
-        width: 45%;
-        font-size: 20px;
-    }
-    .buttonForm:hover {
-        letter-spacing: 0;
     }
     html {
         scroll-snap-type: none;
