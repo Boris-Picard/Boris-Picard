@@ -9,6 +9,7 @@ body {
     margin: 0;
 }
 
+
 /* html {
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
@@ -22,12 +23,13 @@ section {
     position: absolute;
     width: 100% !important;
     height: 100% !important;
-    background-color: #181A1B;
+    background-color: #222222;
 }
 
 canvas {
     width: 100% !important;
     height: 100% !important;
+    z-index: -1;
 }
 
 /* TYPO */ 
@@ -81,11 +83,10 @@ canvas {
     font-size: 24px;
     cursor: pointer;
     text-transform: uppercase;
-    z-index: 11;
+    z-index: 9999999;
     border: none;
     background-color: transparent;
     overflow: hidden;
-    z-index: 9999999;
 }
 
 .navToggler:hover {
@@ -121,9 +122,7 @@ canvas {
     top: 0;
     height: 100%;
     width: 100%;
-    background-color: #111111;
     z-index: 10;
-    display: flex;
     transition: all 0.5s ease;
     visibility: hidden;
     opacity: 0;
@@ -132,6 +131,9 @@ canvas {
 .navJs.open {
     visibility: visible;
     opacity: 1;
+    background-color: #181A1B;
+    width: 100%;
+    height: 100%;
     z-index: 999999;
 }
 
@@ -364,7 +366,7 @@ canvas {
     padding: 24px;
     display: flex;
     height: 100vh;
-    background-color: #181A1B;
+    background-color: #222222;
     overflow: hidden;
     flex-direction: row;
     flex-wrap: wrap;
@@ -446,7 +448,7 @@ canvas {
     flex-direction: row;
     flex-wrap: wrap;
     height: 100vh;
-    background-color: #181A1B;
+    background-color: #222222;
     justify-content: center;
     overflow: hidden;
 }
@@ -614,7 +616,7 @@ canvas {
 }
 
 .leftColSkills {
-    background: rgba(255,255,255,0.15);
+    background: rgba(255,255,255,0.1);
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -678,7 +680,7 @@ canvas {
 }
 
 .middleColSkills {
-    background: rgba(255,255,255,0.15);
+    background: rgba(255,255,255,0.1);
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -687,7 +689,7 @@ canvas {
 }
 
 .rightColSkills {
-    background: rgba(255,255,255,0.15);
+    background: rgba(255,255,255,0.1);
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -697,14 +699,14 @@ canvas {
 
 .incomingColSkills {
     display: flex;
-    background: rgba(255,255,255,0.15);
+    background: rgba(255,255,255,0.1);
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
 }
 
-.html {
+.html, .htmlModal {
     color: #FF5733;
     transition: color 0.5s ease-in-out;
 }
@@ -713,7 +715,7 @@ canvas {
     color: var(--white-color);
 }
 
-.css {
+.css, .cssModal {
     color: #0A66C2;
     transition: color 0.5s ease-in-out;
 }
@@ -722,7 +724,7 @@ canvas {
     color: var(--white-color);
 }
 
-.javascript {
+.javascript, .jsModal {
     color: #d8c545;
     transition: color 0.5s ease-in-out;
 }
@@ -731,7 +733,7 @@ canvas {
     color: var(--white-color);
 }
 
-.bootstrap {
+.bootstrap, .bootstrapModal {
     color: #7952B3;
     transition: color 0.5s ease-in-out;
 }
@@ -740,7 +742,7 @@ canvas {
     color: var(--white-color);
 }
 
-.tailwind {
+.tailwind, .tailwindModal {
     transition: filter 0.5s ease-in-out;
 }
 
@@ -748,7 +750,7 @@ canvas {
     filter: brightness(0) saturate(100%) invert(100%);
 }
 
-.php {
+.php, .phpModal {
     color: #777BB3;
     transition: color 0.5s ease-in-out;
 }
@@ -762,11 +764,15 @@ canvas {
     transition: color 0.5s ease-in-out;
 }
 
+.githubSkillsModal {
+    color: #181A1B;
+}
+
 .githubSkills:hover {
     color: var(--primary-color);
 }
 
-.mySql {
+.mySql, .mySqlModal {
     transition: filter 0.5s ease-in-out;
 }
 
@@ -774,7 +780,7 @@ canvas {
     filter: brightness(0) saturate(100%) invert(100%);
 }
 
-.figma {
+.figma, .figmaModal {
     transition: filter 0.5s ease-in-out;
 }
 
@@ -782,7 +788,7 @@ canvas {
     filter: brightness(0) saturate(100%) invert(100%);
 }
 
-.wordpress {
+.wordpress, .wordpressModal {
     color: #00749C;
     transition: color 0.5s ease-in-out;
 }
@@ -791,7 +797,7 @@ canvas {
     color: var(--white-color);
 }
 
-.react {
+.react, .reactModal {
     color: #61DBFB;
     transition: color 0.5s ease-in-out;
 }
@@ -800,7 +806,7 @@ canvas {
     color: var(--white-color);
 }
 
-.vueJs {
+.vueJs, .vueJsModal {
     color: #41B883;
     transition: color 0.5s ease-in-out;
 }
@@ -809,7 +815,7 @@ canvas {
     color: var(--white-color);
 }
 
-.nodeJs {
+.nodeJs, .nodeJsModal {
     color: #68a063;
     transition: color 0.5s ease-in-out;
 }
@@ -821,6 +827,10 @@ canvas {
 .symfony {
     transition: color 0.5s ease-in-out;
     color: var(--white-color);
+}
+
+.symfonyModal {
+    color: #181A1B;
 }
 
 .symfony:hover {
@@ -922,7 +932,7 @@ canvas {
 /* PORTFOLIO SECTION */
 .portfolio {
     height: 100vh;
-    background-color: #181a1b;
+    background-color: #222222;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1147,7 +1157,7 @@ canvas {
 /* CONTACT SECTION */
 .contact {
     height: 100vh;
-    background-color: #181A1B;
+    background-color: #222222;
     display: flex;
     flex-direction: column;
     padding: 24px;

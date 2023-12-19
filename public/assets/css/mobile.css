@@ -17,11 +17,14 @@
     .headerContainer {
         margin: 0;
     }
+    .navJs {
+        top: 15%;
+    }
     .navJs a {
         font-size: 40px;
     }
     .navToggler:hover {
-        letter-spacing: 3px;
+        letter-spacing: 0;
     }
     .about {
         flex-direction: column;
