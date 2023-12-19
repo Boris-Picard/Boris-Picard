@@ -9,7 +9,7 @@ if(window.screen.width <= 320 || window.screen.width <= 480) {
     const backgroundHero = document.getElementById('home')
     const imgAbout = document.querySelector('.imgAbout')
     particleJs.style.display = 'none';
-    backgroundHero.style.background = '#181A1B'
+    backgroundHero.style.background = '#222222'
     imgAbout.src = "/public/assets/img/mobileAbout.png"
 }
 

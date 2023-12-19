@@ -67,6 +67,24 @@ canvas {
     left: -15px;
 }
 
+.linkedinLeft {
+    color: var(--white-color);
+    transition: color 0.5s ease-in-out;
+}
+
+.linkedinLeft:hover {
+    color: #0A66C2;
+}
+
+.githubLeft {
+    color: var(--white-color);
+    transition: color 0.5s ease-in-out;
+}
+
+.githubLeft:hover {
+    color: var(--primary-color);
+}
+
 /* NAVBAR */
 .headerContainer {
     display: flex;
@@ -165,7 +183,7 @@ canvas {
     position: relative;
     opacity: 0;
     transform: translateY(100%);
-    font-family: BLUDHAVEN;
+    font-family: MADEBonVoyageRegular;;
     transition: color 0.6s cubic-bezier(.97, .02, .01, .98),
                 transform 1s ease,
                 opacity 0.3s ease;
@@ -506,7 +524,7 @@ canvas {
 }
 
 .leftXpBorder {
-    padding: 0 0 20px 20px;
+    padding: 0 0 0 20px;
     margin-top: -2px;
     border-left: 2px solid rgba(255,255,255,0.2);
     position: relative;
@@ -545,6 +563,7 @@ canvas {
 
 .leftXpBorder p {
     color: var(--white-color);
+    font-size: 18px;
 }
 
 .leftXpBorder li {
@@ -555,10 +574,11 @@ canvas {
 
 .leftXpBorder ul {
     padding-left: 20px;
+    font-size: 18px;
 }
 
 .rightXpBorder {
-    padding: 0 0 20px 20px;
+    padding: 0 0 0 20px;
     margin-top: -2px;
     border-left: 2px solid rgba(255,255,255,0.2);
     position: relative;
@@ -603,10 +623,12 @@ canvas {
 
 .rightXpBorder ul {
     padding-left: 20px;
+    font-size: 18px;
 }
 
 .rightXpBorder p {
     color: var(--white-color);
+    font-size: 18px;
 }
 
 .skillsRow {
