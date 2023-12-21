@@ -195,6 +195,32 @@ gsap.utils.toArray('.from-right').forEach((element, i) => {
     });
 });
 
+// Animation trigger Skills
+document.addEventListener("DOMContentLoaded", function() {
+    const titleSkills = document.querySelector(".titleSkills");
+    const experiencesSection = document.querySelector(".experiences");
+
+    const tl = gsap.timeline({ paused: true });
+
+    tl.to(titleSkills, { rotation: 15, duration: 0.2, ease: "power1.inOut", yoyo: true, repeat: 31 });
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    ScrollTrigger.create({
+        trigger: experiencesSection,
+        start: "top 80%",
+        onEnter: () => {
+            tl.play();
+        },
+        once: true // Ne déclenche l'événement qu'une seule fois à l'entrée de la section
+    });
+});
+
+
+
+
+
+
 
 
 const tl = gsap.timeline({ defaults: { duration: 1, ease: "power2.out" } });

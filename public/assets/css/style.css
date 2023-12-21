@@ -635,6 +635,18 @@ canvas {
     display: flex;
     height: 25%;
     justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.titleSkills {
+    width: 100%;
+    color: var(--white-color);
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 28px;
+    height: 35%;
+    animation: rotate(0deg);
 }
 
 .leftColSkills {
