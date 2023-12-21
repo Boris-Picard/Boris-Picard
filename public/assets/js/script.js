@@ -216,13 +216,6 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-
-
-
-
-
-
-
 const tl = gsap.timeline({ defaults: { duration: 1, ease: "power2.out" } });
 
 tl.from(".heroTitle", { opacity: 0, y: 50, delay:0.5 })
@@ -230,7 +223,7 @@ tl.from(".heroTitle", { opacity: 0, y: 50, delay:0.5 })
     .from(".heroButton", { opacity: 0, y: 50 }, "-=0.20")
     .from(".navToggler", { opacity: 0, y: 50 }, "-=0.20")
     .from("#social-media-icons", { opacity: 0, y: 50 }, "-=0.20")
-    .from([".fa-linkedin", ".github", ".verticalCircle1", ".verticalCircle2", ".verticalCircle3", ".verticalCircle4",".verticalCircle5"], 
+    .from([".linkedinLeft", ".githubLeft", ".verticalCircle1", ".verticalCircle2", ".verticalCircle3", ".verticalCircle4",".verticalCircle5"], 
     { opacity: 0, y: 50 }, "-=0.20");
 
 
