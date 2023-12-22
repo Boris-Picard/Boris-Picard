@@ -4,20 +4,9 @@ body {
     --regular : 18px;
     /* color */
     --primary-color : #f18701;
-    --grey-color : #353B41;
     --white-color : #EFF2F5;
     margin: 0;
 }
-
-
-/* html {
-    scroll-snap-type: y mandatory;
-    overflow-y: scroll;
-}
-
-section {
-    scroll-snap-align: start;
-} */
 
 #particles-js{
     position: absolute;
@@ -148,6 +137,7 @@ canvas {
 }
 
 .navJs.open {
+    display: flex;
     visibility: visible;
     opacity: 1;
     background-color: #181A1B;
@@ -1371,6 +1361,10 @@ textarea:focus {
 .emailForm:hover {
     color: var(--primary-color);
     transition: color .5s ease-in-out;
+}
+
+.email {
+    direction: rtl;
 }
 
 .footerDiv {

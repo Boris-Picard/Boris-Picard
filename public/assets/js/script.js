@@ -10,7 +10,7 @@ if(window.screen.width <= 320 || window.screen.width <= 480) {
     const imgAbout = document.querySelector('.imgAbout')
     particleJs.style.display = 'none';
     backgroundHero.style.background = '#222222'
-    imgAbout.src = "/public/assets/img/mobileAbout.png"
+    imgAbout.src = "/public/assets/img/mobileAbout.avif"
 }
 
 // TRACK CHANGEMENT DE SECTION

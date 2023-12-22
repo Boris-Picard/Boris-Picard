@@ -21,7 +21,7 @@
         font-size: 40px;
     }
     .navToggler span {
-        color: var(--white-color);
+        color: white;
     }
     .navToggler:hover {
         letter-spacing: 0;
