@@ -1325,6 +1325,7 @@ textarea:focus {
     color: #222222;
     font-size: 16px;
     text-decoration: none;
+    width: 100%;
     text-transform: uppercase;
     margin-top: 40px;
     letter-spacing: 2px;
@@ -1334,6 +1335,9 @@ textarea:focus {
     background-color: var(--white-color);
     border-radius: 30px;
     transition: all .5s ease-in-out;
+    border: none;
+    outline: none;
+    cursor: pointer;
 }
 
 .loginBox form .buttonForm:hover {
@@ -1357,6 +1361,16 @@ textarea:focus {
 
 .githubForm:hover {
     color: var(--primary-color);
+    transition: color .5s ease-in-out;
+}
+
+.emailForm {
+    color: var(--white-color);
+}
+
+.emailForm:hover {
+    color: var(--primary-color);
+    transition: color .5s ease-in-out;
 }
 
 .footerDiv {

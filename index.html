@@ -406,7 +406,7 @@
                         <h3 class="titleHoverCard">Jeu du yams</h3>
                         <p class="textHoverCard">Projet realisé en javascript</p>
                         <div class="buttonHoverDiv">
-                            <button type="button" class="buttonHoverCard">voir le projet</button>
+                            <a href="https://boris-picard.github.io/Yams/" aria-label="Yams project" target="_blank" class="buttonHoverCard">voir le projet</a>
                         </div>
                     </div>
                 </div>
@@ -421,7 +421,7 @@
                         <h3 class="titleHoverCard">Jeu du pendu</h3>
                         <p class="textHoverCard">Projet realisé en javascript</p>
                         <div class="buttonHoverDiv">
-                            <button type="button" class="buttonHoverCard">voir le projet</button>
+                            <a href="" aria-label="Pendu project" target="_blank" class="buttonHoverCard">voir le projet</a>
                         </div>
                     </div>
                 </div>
@@ -436,7 +436,7 @@
                         <h3 class="titleHoverCard">Json project</h3>
                         <p class="textHoverCard">Projet realisé dans le but d'apprendre le fetch et l'utilisation de fichier JSON</p>
                         <div class="buttonHoverDiv">
-                            <button type="button" class="buttonHoverCard">voir le projet</button>
+                            <a href="https://boris-picard.github.io/FetchProject/" aria-label="Fetch project" target="_blank" class="buttonHoverCard">voir le projet</a>
                         </div>
                     </div>
                 </div>
@@ -451,7 +451,7 @@
                         <h3 class="titleHoverCard">Formulaire</h3>
                         <p class="textHoverCard">Projet realisé en php sécurisation d'un formulaire</p>
                         <div class="buttonHoverDiv">
-                            <button type="button" class="buttonHoverCard">voir le projet</button>
+                            <a href="https://github.com/Boris-Picard/TPFormulaire" aria-label="Formulaire project" target="_blank" class="buttonHoverCard">voir le projet</a>
                         </div>
                     </div>
                 </div>
@@ -485,27 +485,26 @@
                     <div class="socialsFormbrands">
                         <a href="https://www.linkedin.com/in/boris-picard-2906029b/" aria-label="Linkedin Social" target="_blank"><i class="fa-brands fa-linkedin fa-3x linkedinForm"></i></a>
                         <a href="https://github.com/Boris-Picard" aria-label="Github Social" target="_blank"><i class="fa-brands fa-github fa-3x githubForm"></i></a>
+                        <a href="mailto:picard.boris@gmail.com" aria-label="Email" target="_blank"><i class="fa-solid fa-envelope fa-3x emailForm"></i></a>
                     </div>
-                    <form>
+                    <form action="https://formspree.io/f/xbjnrpkj" method="POST">
                         <div class="userBox">
-                            <input type="text" name="firstname" required id="firstname" placeholder=" ">
-                            <label for="firstname">Prénom</label>
+                            <input type="text" name="firstname" required id="firstname" placeholder=" " autocomplete="given-name">
+                            <label for="firstname">Prénom *</label>
                         </div>
                         <div class="userBox">
-                            <input type="text" name="lastname" required id="lastname" placeholder=" ">
-                            <label for="lastname">Nom</label>
+                            <input type="text" name="lastname" required id="lastname" placeholder=" " autocomplete="family-name">
+                            <label for="lastname">Nom *</label>
                         </div>
                         <div class="userBox">
-                            <input type="email" name="email" required id="email" placeholder=" ">
-                            <label for="email">Email</label>
+                            <input type="email" name="email" required id="email" placeholder=" " autocomplete="email">
+                            <label for="email">Email *</label>
                         </div>
                         <div class="userBox">
-                            <textarea name="textarea" id="textarea" rows="10" required placeholder="Votre message"></textarea>
+                            <textarea name="textarea" id="textarea" rows="10" required placeholder="Votre message *"></textarea>
                             <label for="textarea"></label>
                         </div>
-                        <a href="#" class="buttonForm">
-                                Envoyer
-                        </a>
+                            <button type="submit" class="buttonForm">Envoyer</button>
                     </form>
                 </div>
             </div>
