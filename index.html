@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Boris Picard Développeur Web et Web Mobile">
     <link rel="stylesheet" href="/public/assets/css/style.css">
-    <link rel="stylesheet" href="/public/assets/css/mobile.css">
-    <link rel="stylesheet" href="/public/assets/css/tablet.css">
+    <link rel="stylesheet" href="/public/assets/css/mobile.css" media="screen and (min-width: 320px) and (max-width: 480px)">
+    <link rel="stylesheet" href="/public/assets/css/tablet.css" media="screen and (min-width: 768px) and (max-width: 992px)">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <title>Boris Picard - développeur Web et Web Mobile</title>
 </head>
@@ -72,7 +72,7 @@
             </div>
             <div class="rightAbout from-right">
                 <div class="divImgAbout">
-                    <img src="/public/assets/img/IMG_0948.jpg" alt="profil picture" class="imgAbout">
+                    <img src="/public/assets/img/IMG_0948.avif" alt="profil picture" class="imgAbout">
                 </div>
             </div>
         </section>
@@ -478,45 +478,41 @@
                 <h2 class="titleContact">me contacter</h2>
             </div>
             <div class="rowForm">
-                <!-- <div class="colForm"> -->
-                    <!-- <div class="formSocials">
-                        <h5>mes réseaux</h5>
-                        <div class="formIcons">
-                            <a href="https://www.linkedin.com/in/boris-picard-2906029b/" aria-label="Linkedin Social" target="_blank"><i class="fa-brands fa-linkedin fa-3x"></i></a>
-                            <a href="https://github.com/Boris-Picard" aria-label="Github Social" target="_blank"><i class="fa-brands fa-github fa-3x"></i></a>
-                        </div>
-                    </div> -->
-                    <div id="form-ui">
-                        <form action="" method="post" id="form">
-                            <div id="form-body">
-                                <div id="socialsRowForm">
-                                    <h2>Mes Réseaux</h2>
-                                    <div id="socialsForm">
-                                        <a href="https://www.linkedin.com/in/boris-picard-2906029b/" aria-label="Linkedin Social" target="_blank"><i class="fa-brands fa-linkedin fa-3x"></i></a>
-                                        <a href="https://github.com/Boris-Picard" aria-label="Github Social" target="_blank"><i class="fa-brands fa-github fa-3x"></i></a>
-                                    </div>
-                                </div>
-                                <div id="inputArea">
-                                    <div class="formInput">
-                                        <label for="firstname">Prénom*</label>
-                                        <input placeholder="Votre Prénom" type="text" name="firstname" id="firstname">
-                                    </div>
-                                    <div class="formInput">
-                                        <input placeholder="Password" type="password">
-                                    </div>
-                                </div>
-                                <div id="submitbuttonDiv">
-                                    <button id="submitButton" type="submit">Envoyer</button>
-                                </div>
-                            </div>
-                        </form>
+                <div class="loginBox from-right">
+                    <div class="socialsFormTitle">
+                        <h3>Mes réseaux</h3>
                     </div>
-                <!-- </div> -->
+                    <div class="socialsFormbrands">
+                        <a href="https://www.linkedin.com/in/boris-picard-2906029b/" aria-label="Linkedin Social" target="_blank"><i class="fa-brands fa-linkedin fa-3x linkedinForm"></i></a>
+                        <a href="https://github.com/Boris-Picard" aria-label="Github Social" target="_blank"><i class="fa-brands fa-github fa-3x githubForm"></i></a>
+                    </div>
+                    <form>
+                        <div class="userBox">
+                            <input type="text" name="firstname" required id="firstname" placeholder=" ">
+                            <label for="firstname">Prénom</label>
+                        </div>
+                        <div class="userBox">
+                            <input type="text" name="lastname" required id="lastname" placeholder=" ">
+                            <label for="lastname">Nom</label>
+                        </div>
+                        <div class="userBox">
+                            <input type="email" name="email" required id="email" placeholder=" ">
+                            <label for="email">Email</label>
+                        </div>
+                        <div class="userBox">
+                            <textarea name="textarea" id="textarea" rows="10" required placeholder="Votre message"></textarea>
+                            <label for="textarea"></label>
+                        </div>
+                        <a href="#" class="buttonForm">
+                                Envoyer
+                        </a>
+                    </form>
+                </div>
             </div>
         </section>
     </main>
     <footer>
-
+        <div class="footerDiv">2023 || Made by © Boris</div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/gsap.min.js" defer></script>

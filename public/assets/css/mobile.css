@@ -20,6 +20,9 @@
     .navJs a {
         font-size: 40px;
     }
+    .navToggler span {
+        color: var(--white-color);
+    }
     .navToggler:hover {
         letter-spacing: 0;
     }
