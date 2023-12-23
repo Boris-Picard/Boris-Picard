@@ -1,4 +1,4 @@
-@media only screen and (min-width: 993px) and (max-width: 1735px) {
+@media only screen and (min-width: 1024px) and (max-width: 1880px) {
     .heroTitle {
         font-size: 200px;
     }
@@ -79,8 +79,8 @@
         padding: 0 24px;
     }
     .hover-overlay {
-        width: 91.5%;
-        left: 23px;
+        width: 92%;
+        left: 24px;
     }
     .titleHoverCard {
         font-size: 30px;
