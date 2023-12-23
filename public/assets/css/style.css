@@ -244,6 +244,8 @@ canvas {
     z-index: 9;
     border: none;
     font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    color: #222222;
 }
 
 .heroButton:hover {
