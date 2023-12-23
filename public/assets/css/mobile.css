@@ -162,4 +162,7 @@
     .loginBox {
         width: 100%;
     }
+    form {
+        padding: 0;
+    }
 }

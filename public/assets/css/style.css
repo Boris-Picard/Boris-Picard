@@ -1312,6 +1312,10 @@ textarea:focus {
     font-size: 12px;
 }
 
+form {
+    padding: 24px;
+}
+
 .loginBox form .buttonForm {
     padding: 15px 20px;
     color: #222222;
