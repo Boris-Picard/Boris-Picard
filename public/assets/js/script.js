@@ -1,5 +1,5 @@
 /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
-particlesJS.load('particles-js', '/public/assets/js/particlesjs-config.json', function() {
+particlesJS.load('particles-js', 'particles.json', function(){
     console.log('callback - particles.js config loaded');
 });
 
@@ -10,7 +10,7 @@ if(window.screen.width <= 320 || window.screen.width <= 480) {
     const imgAbout = document.querySelector('.imgAbout')
     particleJs.style.display = 'none';
     backgroundHero.style.background = '#222222'
-    imgAbout.src = "/public/assets/img/mobileAbout.avif"
+    imgAbout.src = "./public/assets/img/mobileAbout.avif"
 }
 
 // TRACK CHANGEMENT DE SECTION
