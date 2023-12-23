@@ -481,7 +481,6 @@ canvas {
 }
 
 .leftXpDiv {
-    height:60%;
     width: 40%;
     display: flex;
     flex-direction: column;
@@ -521,7 +520,6 @@ canvas {
     margin-top: -2px;
     border-left: 2px solid rgba(255,255,255,0.2);
     position: relative;
-    height: 100%;
     width: 70%;
 }
 
@@ -626,20 +624,11 @@ canvas {
 
 .skillsRow {
     display: flex;
-    height: 25%;
+    height: 20%;
     justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
-}
-
-.titleSkills {
-    width: 100%;
-    color: var(--white-color);
-    text-transform: uppercase;
-    text-align: center;
-    font-size: 28px;
-    height: 35%;
-    animation: rotate(0deg);
+    padding-top: 15px;
 }
 
 .leftColSkills {
@@ -1219,8 +1208,7 @@ canvas {
 
 .loginBox {
     width: 40%;
-    height: 85%;
-    padding: 40px;
+    padding: 24px;
     background: rgba(24, 20, 20, 0.7);
     box-sizing: border-box;
     box-shadow: 0 15px 25px rgba(0,0,0,.6);
