@@ -1,0 +1,164 @@
+@media only screen and (min-width: 992px) and (max-width: 1735px) {
+    .heroTitle {
+        font-size: 200px;
+    }
+    .verticalCircle1 {
+        bottom: 63%;
+    }
+    .verticalCircle2 {
+        bottom: 59%;
+    }
+    .verticalCircle3 {
+        bottom: 55%;
+    }
+    .verticalCircle4 {
+        bottom: 51%;
+    }
+    .verticalCircle5 {
+        bottom: 47%;
+    }
+    .headerContainer {
+        margin: 0;
+    }
+    .navJs a {
+        font-size: 100px;
+    }
+    .navToggler:hover {
+        letter-spacing: 0;
+    }
+    .about {
+        padding: 20px;
+        height: 100%;
+    }
+    .leftAbout {
+        align-items: start;
+        display: flex;
+        width: 100vw;
+        padding-left: 10px;
+    }
+    .titleAbout {
+        padding: 20px;
+        font-size: 100px;
+    }
+    .leftAbout p {
+        font-size: 20px;
+    }
+    .leftAbout p:nth-last-child(1) {
+        padding: 0px 40px 80px 40px;
+    }
+    .imgAbout {
+        padding: 20px;
+        max-width: 600px;
+        max-height: 600px;
+    }
+    .divImgAbout::before {
+        height: 95%;
+        top: -15px;
+        left: 25px;
+    }
+    .rightAbout {
+        padding: 0;
+    }
+    .portfolio {
+        height: 100%;
+        padding: 24px;
+    }
+    .titlePortfolio {
+        padding: 20px;
+        font-size: 100px;
+    }
+    #filter-buttons button {
+        font-size: 20px;
+    }
+    #filter-buttons button:hover {
+        letter-spacing: 0;
+    }
+    .card {
+        width: 30%; 
+        height: 30%; 
+        padding: 0 24px;
+    }
+    .hover-overlay {
+        width: 91.5%;
+        left: 23px;
+    }
+    .titleHoverCard {
+        font-size: 30px;
+    }
+    .textHoverCard {
+        font-size: 16px;
+    }
+    .buttonHoverCard {
+        font-size: 16px;
+    }
+    .pillsHtml {
+        font-size: 12px;
+    }
+    .pillsCss {
+        font-size: 12px;
+    }
+    .pillsJs {
+        font-size: 12px;
+    }
+    .pillsPhp {
+        font-size: 12px;
+    }
+    .pillsWordpress {
+        font-size: 12px;
+    }
+    .buttonHoverCard {
+        font-size: 16px;
+        padding: 10px;
+    }
+    .contact {
+        height: 100%;
+        flex-direction: column;
+        padding: 20px;
+    }
+    .rowTitleContact {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .titleContact {
+        font-size: 56px;
+    }
+    html {
+        scroll-snap-type: none;
+    }
+    textarea::placeholder {
+        color: var(--white-color);
+        font-size: 24px;
+        font-family: 'Montserrat', sans-serif;
+    }
+    .experiences {
+        padding: 20px;
+        height: 100%;
+    }
+    .skillsRow {
+        padding-top: 20px;
+        flex-direction: wrap;
+        width: 88%;
+    }
+    .incomingColSkills {
+        padding: 0 0 20px 0;
+    }
+    .leftXpBorder li {
+        font-size: 20px;
+    }
+    .rightXpBorder {
+        font-size: 20px;
+    }
+    .titleXp {
+        font-size: 56px;
+    }
+    .leftXpDiv {
+        width: 50%;
+    }
+    .rightXpDiv {
+        width: 50%;
+    }
+    .loginBox {
+        width: 55%;
+    }
+}
