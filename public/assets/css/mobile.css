@@ -18,7 +18,13 @@
         margin: 0;
     }
     .navJs a {
-        font-size: 40px;
+        font-size: 36px;
+    }
+    .navJs ul {
+        top: 10%;
+        left: 0;
+        right: 0;
+        bottom: 0;
     }
     .navToggler span {
         color: white;
@@ -36,7 +42,9 @@
         justify-content: center;
         display: flex;
         width: 100%;
-        padding-left: 10px;
+    }
+    .leftAbout p {
+        padding: 0;
     }
     .titleAboutDiv h2 {
         padding: 20px;
@@ -139,7 +147,7 @@
         height: 100%;
     }
     .titleXp {
-        font-size: 50px;
+        font-size: 46px;
         padding: 10px;
         margin: 0;
     }

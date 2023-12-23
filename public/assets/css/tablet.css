@@ -17,6 +17,12 @@
     .verticalCircle5 {
         bottom: 1%;
     }
+    .navJs ul {
+        top: 10%;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
     .headerContainer {
         margin: 0;
     }

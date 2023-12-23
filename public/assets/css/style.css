@@ -1248,6 +1248,7 @@ canvas {
     color: var(--white-color);
     margin-bottom: 30px;
     border: none;
+    border-radius: 0;
     border-bottom: 1px solid var(--white-color);
     outline: none;
     background: transparent;

@@ -20,6 +20,12 @@
     .headerContainer {
         margin: 0;
     }
+    .navJs ul {
+        top: 10%;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
     .navJs a {
         font-size: 100px;
     }
