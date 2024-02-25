@@ -6,4 +6,3 @@ I am passionate about web development and here are some points to get to know me
 - 🌱 I’m currently learning MySql
 
 
-![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=Boris-Picard)
