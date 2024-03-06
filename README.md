@@ -9,8 +9,14 @@
 - 🌱 I’m currently learning **React**.
 - 🤝 I'm looking for an apprenticeship contract
 
-<img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white"/> [Contact me](mailto:picard.boris@gmail.com?subject=[GitHub])
-<img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"/> <a href="https://www.linkedin.com/in/boris-picard-2906029b/">My Linkedin<a/>
+## **Contact me**
+
+<a href="mailto:picard.boris@gmail.com?subject=[GitHub]">
+  <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white"/>
+</a>
+<a href="https://www.linkedin.com/in/boris-picard-2906029b/">
+  <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"/>
+</a>
 
 ## **My Skills**
 
