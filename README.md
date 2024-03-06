@@ -11,7 +11,7 @@
 
 ## **Contact me**
 
-<a href="mailto:picard.boris@gmail.com?subject=[GitHub]">
+<a href="mailto:picard.boris@gmail.com?subject=[GitHub]" target="_blank">
   <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white"/>
 </a>
 <a href="https://www.linkedin.com/in/boris-picard-2906029b/">
