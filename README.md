@@ -4,16 +4,17 @@
 ## **About me**
 
 - 👨‍💻 Web Developer.
-- 🚀 My (https://boris-picard.github.io/Boris-Picard/ "Porfolio").
+- 🚀 My <a href="https://boris-picard.github.io/Boris-Picard/">Portfolio</a>
 - 🔭 I’m currently working on personnals project with **React**.
 - 🌱 I’m currently learning **React**.
 - 🤝 I'm looking for an apprenticeship contract
 
 ## **Contact me**
 
-<a href="mailto:picard.boris@gmail.com?subject=[GitHub]" target="_blank">
+<a href="mailto:picard.boris@gmail.com?subject=[GitHub]">
   <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white"/>
 </a>
+
 <a href="https://www.linkedin.com/in/boris-picard-2906029b/">
   <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"/>
 </a>
