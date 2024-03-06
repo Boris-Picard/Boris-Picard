@@ -1,4 +1,4 @@
-## **Hi there 👋** 
+## **Hi there 👋** // ![](https://komarev.com/ghpvc/?username=boris-picard&label=VIEWS&abbreviated=true)
 
 
 ## **About me**
@@ -32,5 +32,3 @@
 <a href="https://github.com/Boris-Picard">
   <img height=200 align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=boris-picard&layout=compact&theme=highcontrast&hide_border=true&card_width=300"/>
 </a>
-
-![](https://komarev.com/ghpvc/?username=boris-picard&label=VIEWS&abbreviated=true)
