@@ -1,4 +1,4 @@
-## **Hi there 👋** // ![](https://komarev.com/ghpvc/?username=boris-picard&label=VIEWS&abbreviated=true&style=for-the-badge)
+## **Hi there 👋** 
 
 
 ## **About me**
@@ -8,6 +8,8 @@
 - 🔭 I’m currently working on personnals project with **React**.
 - 🌱 I’m currently learning **React**.
 - 🤝 I'm looking for an apprenticeship contract
+
+![](https://komarev.com/ghpvc/?username=boris-picard&label=VIEWS&abbreviated=true&style=for-the-badge)
 
 ## **Contact me**
 
