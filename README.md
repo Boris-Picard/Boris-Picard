@@ -10,5 +10,5 @@ I am passionate about web development and here are some points to get to know me
 </a>
 
 <a href="https://github.com/Boris-Picard">
-  <img height=200 align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=boris-picard&layout=compact&theme=highcontrast&hide_border=true&card_width=290"/>
+  <img height=200 align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=boris-picard&layout=compact&theme=highcontrast&hide_border=true&card_width=300"/>
 </a>
