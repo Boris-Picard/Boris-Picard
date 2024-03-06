@@ -1,4 +1,4 @@
-## **Hi there 👋**
+## **Hi there 👋** ![](https://komarev.com/ghpvc/?username=boris-picard&label=VIEWS&abbreviated=true)
 
 
 ## **About me**
