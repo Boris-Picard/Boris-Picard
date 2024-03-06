@@ -1,6 +1,6 @@
 ### Hi there 👋
 
---- **About me**
+---**About me**
 
 - 🔭 I’m currently working on personnals projet with, HTML, CSS, Javascript, PHP, MySql
 - 🌱 I’m currently learning MySql
