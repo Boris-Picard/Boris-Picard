@@ -10,4 +10,5 @@ I am passionate about web development and here are some points to get to know me
 
 ![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=boris-picard)
 
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=boris-picard)
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=boris-picard&layout=compact=layout)
+
