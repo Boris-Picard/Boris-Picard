@@ -8,7 +8,7 @@ I am passionate about web development and here are some points to get to know me
 
 
 
-![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=boris-picard&theme=date_night)
+![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=boris-picard&theme=aura_dark)
 
 ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=boris-picard&layout=compact)
 
