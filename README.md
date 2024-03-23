@@ -7,7 +7,7 @@
 ## **About me**
 
 - 👨‍💻 Web Developer.
-- 🚀 My <a href="https://boris-picard.github.io/Boris-Picard/">Portfolio</a>
+- 🚀 My <a href="https://boris-picard.fr/">Portfolio</a>
 - 🔭 I’m currently working on personnals project with **React**.
 - 🌱 I’m currently learning **React**.
 - 🤝 I'm looking for an apprenticeship contract
