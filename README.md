@@ -9,7 +9,7 @@
 - 👨‍💻 Web Developer.
 - 🚀 My <a href="https://boris-picard.fr/">Portfolio</a>
 - 🔭 I’m currently working on personnals project with **React**.
-- 🌱 I’m currently learning **React**, **Express**, **MongoDB**.
+- 🌱 I’m currently learning **NextJS**, **Postgres**, **Prisma**.
 - 🤝 I'm looking for an apprenticeship contract
 
 ## **Contact me**
