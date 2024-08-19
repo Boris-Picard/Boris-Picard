@@ -8,8 +8,8 @@
 
 - 👨‍💻 Web Developer.
 - 🚀 My <a href="https://boris-picard.fr/">Portfolio</a>
-- 🔭 I’m currently working on personnals project with **NextJS**.
-- 🌱 I’m currently learning **NextJS**, **Postgres**, **Prisma**.
+- 🔭 I’m currently working on personnals project with **Symfony**.
+- 🌱 I’m currently learning **Symfony**.
 - 🤝 I'm looking for an apprenticeship contract
 
 ## **Contact me**
