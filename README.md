@@ -7,7 +7,7 @@
 ## **About me**
 
 - 👨‍💻 Web Developer.
-- 🚀 My <a href="https://boris-picard.fr/">Portfolio</a>
+- 🚀 My <a href="https://www.boris-picard.com/">Portfolio</a>
 - 🔭 I’m currently working on personnals project with **Symfony**.
 - 🌱 I’m currently learning **Symfony**.
 
